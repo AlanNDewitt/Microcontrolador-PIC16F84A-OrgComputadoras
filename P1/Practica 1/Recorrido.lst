@@ -1,0 +1,290 @@
+MPASM  5.50                     RECORRIDO.ASM   2-6-2022  17:11:17         PAGE  1
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00001 #include "P16F84.inc"
+                      00001         LIST
+                      00002 
+                      00003 ;==========================================================================
+                      00004 ;  MPASM PIC16F84 processor include
+                      00005 ; 
+                      00006 ;  (c) Copyright 1999-2013 Microchip Technology, All rights reserved
+                      00007 ;==========================================================================
+                      00008 
+Message[301]: MESSAGE: (Processor-header file mismatch.  Verify selected processor.)
+                      00206         LIST
+  0000000C            00002 TEMP EQU 0XC
+Warning[203]: Found opcode in column 1. (BSF)
+0000   1683           00003 BSF STATUS,5 ; IR A LA PÁGINA1
+Warning[203]: Found opcode in column 1. (CLRF)
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+0001   0186           00004 CLRF TRISB ;TODOS LOS BITS DEL PUERTO B SON SALIDA
+Warning[203]: Found opcode in column 1. (BCF)
+0002   1283           00005 BCF STATUS,5 ;IR A PÁGINA 0
+                      00006 
+Warning[203]: Found opcode in column 1. (CLRF)
+0003   0186           00007 CLRF PORTB ;INICIO DEL PORTB A CERO
+                      00008 
+0004                  00009 CICLO
+Warning[203]: Found opcode in column 1. (MOVLW)
+0004   3001           00010 MOVLW b'00000001'
+Warning[203]: Found opcode in column 1. (MOVWF)
+0005   0086           00011 MOVWF PORTB
+Warning[203]: Found opcode in column 1. (CLRF)
+0006   0186           00012 CLRF PORTB
+                      00013 
+Warning[203]: Found opcode in column 1. (MOVLW)
+0007   3002           00014 MOVLW b'00000010'
+Warning[203]: Found opcode in column 1. (MOVWF)
+0008   0086           00015 MOVWF PORTB
+Warning[203]: Found opcode in column 1. (CLRF)
+0009   0186           00016 CLRF PORTB
+                      00017 
+Warning[203]: Found opcode in column 1. (MOVLW)
+000A   3004           00018 MOVLW b'00000100'
+Warning[203]: Found opcode in column 1. (MOVWF)
+000B   0086           00019 MOVWF PORTB
+Warning[203]: Found opcode in column 1. (CLRF)
+000C   0186           00020 CLRF PORTB
+                      00021 
+Warning[203]: Found opcode in column 1. (MOVLW)
+000D   3008           00022 MOVLW b'00001000'
+Warning[203]: Found opcode in column 1. (MOVWF)
+000E   0086           00023 MOVWF PORTB
+Warning[203]: Found opcode in column 1. (CLRF)
+000F   0186           00024 CLRF PORTB
+                      00025 
+Warning[203]: Found opcode in column 1. (MOVLW)
+MPASM  5.50                     RECORRIDO.ASM   2-6-2022  17:11:17         PAGE  2
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+0010   3010           00026 MOVLW b'00010000'
+Warning[203]: Found opcode in column 1. (MOVWF)
+0011   0086           00027 MOVWF PORTB
+Warning[203]: Found opcode in column 1. (CLRF)
+0012   0186           00028 CLRF PORTB
+                      00029 
+Warning[203]: Found opcode in column 1. (MOVLW)
+0013   3020           00030 MOVLW b'00100000'
+Warning[203]: Found opcode in column 1. (MOVWF)
+0014   0086           00031 MOVWF PORTB
+Warning[203]: Found opcode in column 1. (CLRF)
+0015   0186           00032 CLRF PORTB
+                      00033 
+Warning[203]: Found opcode in column 1. (MOVLW)
+0016   3040           00034 MOVLW b'01000000'
+Warning[203]: Found opcode in column 1. (MOVWF)
+0017   0086           00035 MOVWF PORTB
+Warning[203]: Found opcode in column 1. (CLRF)
+0018   0186           00036 CLRF PORTB
+                      00037 
+Warning[203]: Found opcode in column 1. (MOVLW)
+0019   3080           00038 MOVLW b'10000000'
+Warning[203]: Found opcode in column 1. (MOVWF)
+001A   0086           00039 MOVWF PORTB
+Warning[203]: Found opcode in column 1. (CLRF)
+001B   0186           00040 CLRF PORTB
+                      00041 
+Warning[203]: Found opcode in column 1. (MOVLW)
+001C   3080           00042 MOVLW b'10000000'
+Warning[203]: Found opcode in column 1. (MOVWF)
+001D   0086           00043 MOVWF PORTB
+Warning[203]: Found opcode in column 1. (CLRF)
+001E   0186           00044 CLRF PORTB
+                      00045 
+                      00046 
+Warning[203]: Found opcode in column 1. (MOVLW)
+001F   3040           00047 MOVLW b'01000000'
+Warning[203]: Found opcode in column 1. (MOVWF)
+0020   0086           00048 MOVWF PORTB
+Warning[203]: Found opcode in column 1. (CLRF)
+0021   0186           00049 CLRF PORTB
+                      00050 
+Warning[203]: Found opcode in column 1. (MOVLW)
+0022   3020           00051 MOVLW b'00100000'
+Warning[203]: Found opcode in column 1. (MOVWF)
+0023   0086           00052 MOVWF PORTB
+Warning[203]: Found opcode in column 1. (CLRF)
+0024   0186           00053 CLRF PORTB
+                      00054 
+Warning[203]: Found opcode in column 1. (MOVLW)
+0025   3010           00055 MOVLW b'00010000'
+Warning[203]: Found opcode in column 1. (MOVWF)
+0026   0086           00056 MOVWF PORTB
+MPASM  5.50                     RECORRIDO.ASM   2-6-2022  17:11:17         PAGE  3
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+Warning[203]: Found opcode in column 1. (CLRF)
+0027   0186           00057 CLRF PORTB
+                      00058 
+Warning[203]: Found opcode in column 1. (MOVLW)
+0028   3008           00059 MOVLW b'00001000'
+Warning[203]: Found opcode in column 1. (MOVWF)
+0029   0086           00060 MOVWF PORTB
+Warning[203]: Found opcode in column 1. (CLRF)
+002A   0186           00061 CLRF PORTB
+                      00062 
+Warning[203]: Found opcode in column 1. (MOVLW)
+002B   3004           00063 MOVLW b'00000100'
+Warning[203]: Found opcode in column 1. (MOVWF)
+002C   0086           00064 MOVWF PORTB
+Warning[203]: Found opcode in column 1. (CLRF)
+002D   0186           00065 CLRF PORTB
+                      00066 
+Warning[203]: Found opcode in column 1. (MOVLW)
+002E   3002           00067 MOVLW b'00000010'
+Warning[203]: Found opcode in column 1. (MOVWF)
+002F   0086           00068 MOVWF PORTB
+Warning[203]: Found opcode in column 1. (CLRF)
+0030   0186           00069 CLRF PORTB
+                      00070 
+Warning[203]: Found opcode in column 1. (MOVLW)
+0031   3001           00071 MOVLW b'00000001'
+Warning[203]: Found opcode in column 1. (MOVWF)
+0032   0086           00072 MOVWF PORTB
+Warning[203]: Found opcode in column 1. (CLRF)
+0033   0186           00073 CLRF PORTB
+                      00074 
+Warning[203]: Found opcode in column 1. (GOTO)
+0034   2804           00075 GOTO CICLO
+                      00076 
+Warning[205]: Found directive in column 1. (END)
+                      00077 END
+MPASM  5.50                     RECORRIDO.ASM   2-6-2022  17:11:17         PAGE  4
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+C                                 00000000
+CICLO                             00000004
+DC                                00000001
+EEADR                             00000009
+EECON1                            00000088
+EECON2                            00000089
+EEDATA                            00000008
+EEIE                              00000006
+EEIF                              00000004
+F                                 00000001
+FSR                               00000004
+GIE                               00000007
+INDF                              00000000
+INTCON                            0000000B
+INTE                              00000004
+INTEDG                            00000006
+INTF                              00000001
+IRP                               00000007
+NOT_PD                            00000003
+NOT_RBPU                          00000007
+NOT_TO                            00000004
+OPTION_REG                        00000081
+PCL                               00000002
+PCLATH                            0000000A
+PORTA                             00000005
+PORTB                             00000006
+PS0                               00000000
+PS1                               00000001
+PS2                               00000002
+PSA                               00000003
+RA0                               00000000
+RA1                               00000001
+RA2                               00000002
+RA3                               00000003
+RA4                               00000004
+RB0                               00000000
+RB1                               00000001
+RB2                               00000002
+RB3                               00000003
+RB4                               00000004
+RB5                               00000005
+RB6                               00000006
+RB7                               00000007
+RBIE                              00000003
+RBIF                              00000000
+RD                                00000000
+RP0                               00000005
+RP1                               00000006
+STATUS                            00000003
+T0CS                              00000005
+T0IE                              00000005
+T0IF                              00000002
+T0SE                              00000004
+MPASM  5.50                     RECORRIDO.ASM   2-6-2022  17:11:17         PAGE  5
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+TEMP                              0000000C
+TMR0                              00000001
+TMR0IE                            00000005
+TMR0IF                            00000002
+TRISA                             00000085
+TRISA0                            00000000
+TRISA1                            00000001
+TRISA2                            00000002
+TRISA3                            00000003
+TRISA4                            00000004
+TRISB                             00000086
+TRISB0                            00000000
+TRISB1                            00000001
+TRISB2                            00000002
+TRISB3                            00000003
+TRISB4                            00000004
+TRISB5                            00000005
+TRISB6                            00000006
+TRISB7                            00000007
+W                                 00000000
+WR                                00000001
+WREN                              00000002
+WRERR                             00000003
+Z                                 00000002
+_CONFIG                           00002007
+_CP_OFF                           00003FFF
+_CP_ON                            0000000F
+_FOSC_EXTRC                       00003FFF
+_FOSC_HS                          00003FFE
+_FOSC_LP                          00003FFC
+_FOSC_XT                          00003FFD
+_HS_OSC                           00003FFE
+_IDLOC0                           00002000
+_IDLOC1                           00002001
+_IDLOC2                           00002002
+_IDLOC3                           00002003
+_LP_OSC                           00003FFC
+_PWRTE_OFF                        00003FFF
+_PWRTE_ON                         00003FF7
+_RC_OSC                           00003FFF
+_WDTE_OFF                         00003FFB
+_WDTE_ON                          00003FFF
+_WDT_OFF                          00003FFB
+_WDT_ON                           00003FFF
+_XT_OSC                           00003FFD
+__16F84A                          00000001
+MPASM  5.50                     RECORRIDO.ASM   2-6-2022  17:11:17         PAGE  6
+
+
+MEMORY USAGE MAP ('X' = Used,  '-' = Unused)
+
+
+0000 : XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXX-----------
+
+All other memory blocks unused.
+
+Program Memory Words Used:    53
+Program Memory Words Free:   971
+
+
+Errors   :     0
+Warnings :    54 reported,     0 suppressed
+Messages :     2 reported,     0 suppressed
+
+

@@ -1,0 +1,321 @@
+MPASM  5.50            5CV25_4_5_BCD_7SEG.ASM   3-8-2022  23:57:25         PAGE  1
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00001 #include "P16F84.inc" ;Libreria para el pic
+                      00001         LIST
+                      00002 
+                      00003 ;==========================================================================
+                      00004 ;  MPASM PIC16F84 processor include
+                      00005 ; 
+                      00006 ;  (c) Copyright 1999-2013 Microchip Technology, All rights reserved
+                      00007 ;==========================================================================
+                      00008 
+Message[301]: MESSAGE: (Processor-header file mismatch.  Verify selected processor.)
+                      00206         LIST
+  0000000C            00002 TEMP EQU 0XC
+                      00003                   
+Warning[203]: Found opcode in column 1. (BSF)
+0000   1683           00004 BSF STATUS,5       ; IR A LA PÁGINA1 o Bloque de memoria 1
+Warning[203]: Found opcode in column 1. (MOVLW)
+0001   300F           00005 MOVLW b'00001111'
+Warning[203]: Found opcode in column 1. (MOVWF)
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+0002   0085           00006 MOVWF TRISA              ;Definimos los primeros 4 pines del puerto A como entrada
+                      00007 
+Warning[203]: Found opcode in column 1. (MOVLW)
+0003   3000           00008 MOVLW b'00000000'
+Warning[203]: Found opcode in column 1. (MOVWF)
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+0004   0086           00009 MOVWF TRISB    ;Definimos el puerto B como salida 
+                      00010 
+Warning[203]: Found opcode in column 1. (BCF)
+0005   1283           00011 BCF STATUS,5 ;IR A PÁGINA 0 o banco de memoria 0
+                      00012 
+                      00013 
+                      00014 
+0006                  00015 BUCLE
+                      00016         ;CLRF PORTA
+                      00017         ;CLRF PORTB ;INICIO DEL PORTB A CERO
+0006   0103           00018         CLRW
+                      00019         
+                      00020         
+0007   3000           00021         MOVLW b'00000000'
+0008   0205           00022         SUBWF PORTA,W  ; Restamos para comparar 
+0009   1903           00023         BTFSC STATUS,2  ; si da cero es igual al bcd y esta bien
+000A   2830           00024                 GOTO B0
+                      00025         
+000B   3001           00026         MOVLW b'00000001'
+000C   0205           00027         SUBWF PORTA,W  ; Restamos para comparar 
+000D   1903           00028         BTFSC STATUS,2  ; si da cero es igual al bcd y esta bien
+000E   2833           00029                 GOTO B1
+                      00030         
+000F   3002           00031         MOVLW b'00000010'
+0010   0205           00032         SUBWF PORTA,W  ; Restamos para comparar 
+0011   1903           00033         BTFSC STATUS,2  ; si da cero es igual al bcd y esta bien
+0012   2836           00034                 GOTO B2
+                      00035                 
+MPASM  5.50            5CV25_4_5_BCD_7SEG.ASM   3-8-2022  23:57:25         PAGE  2
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+0013   3003           00036         MOVLW b'00000011'
+0014   0205           00037         SUBWF PORTA,W  ; Restamos para comparar 
+0015   1903           00038         BTFSC STATUS,2  ; si da cero es igual al bcd y esta bien
+0016   2839           00039                 GOTO B3
+                      00040                 
+0017   3004           00041         MOVLW b'00000100'
+0018   0205           00042         SUBWF PORTA,W  ; Restamos para comparar 
+0019   1903           00043         BTFSC STATUS,2  ; si da cero es igual al bcd y esta bien
+001A   283C           00044                 GOTO B4
+                      00045                 
+001B   3005           00046         MOVLW b'00000101'
+001C   0205           00047         SUBWF PORTA,W  ; Restamos para comparar 
+001D   1903           00048         BTFSC STATUS,2  ; si da cero es igual al bcd y esta bien
+001E   283F           00049                 GOTO B5
+                      00050         
+001F   3006           00051         MOVLW b'00000110'
+0020   0205           00052         SUBWF PORTA,W  ; Restamos para comparar 
+0021   1903           00053         BTFSC STATUS,2  ; si da cero es igual al bcd y esta bien
+0022   2842           00054                 GOTO B6
+                      00055                 
+0023   3007           00056         MOVLW b'00000111'
+0024   0205           00057         SUBWF PORTA,W  ; Restamos para comparar 
+0025   1903           00058         BTFSC STATUS,2  ; si da cero es igual al bcd y esta bien
+0026   2845           00059                 GOTO B7
+                      00060         
+0027   3008           00061         MOVLW b'00001000'
+0028   0205           00062         SUBWF PORTA,W  ; Restamos para comparar 
+0029   1903           00063         BTFSC STATUS,2  ; si da cero es igual al bcd y esta bien
+002A   2848           00064                 GOTO B8
+                      00065                 
+002B   3009           00066         MOVLW b'00001001'
+002C   0205           00067         SUBWF PORTA,W  ; Restamos para comparar 
+002D   1903           00068         BTFSC STATUS,2  ; si da cero es igual al bcd y esta bien
+002E   284B           00069                 GOTO B9
+                      00070                 
+002F   284E           00071         GOTO NOBCD
+                      00072                 
+                      00073         
+0030                  00074 B0
+0030   30C0           00075         MOVLW b'11000000'
+0031   0086           00076         MOVWF PORTB
+0032   2806           00077         GOTO BUCLE
+                      00078                  
+0033                  00079 B1
+0033   30F9           00080         MOVLW b'11111001'
+0034   0086           00081         MOVWF PORTB
+0035   2806           00082         GOTO BUCLE
+                      00083 
+0036                  00084 B2
+0036   30A4           00085         MOVLW b'10100100'
+0037   0086           00086         MOVWF PORTB
+0038   2806           00087         GOTO BUCLE
+                      00088 
+MPASM  5.50            5CV25_4_5_BCD_7SEG.ASM   3-8-2022  23:57:25         PAGE  3
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+0039                  00089 B3
+0039   30B0           00090         MOVLW b'10110000'
+003A   0086           00091         MOVWF PORTB
+003B   2806           00092         GOTO BUCLE
+                      00093         
+003C                  00094 B4
+003C   3099           00095         MOVLW b'10011001'
+                      00096                 ;gfedcba
+003D   0086           00097         MOVWF PORTB
+003E   2806           00098         GOTO BUCLE
+                      00099         
+003F                  00100 B5
+003F   3092           00101         MOVLW b'10010010'
+                      00102                 ;gfedcba
+0040   0086           00103         MOVWF PORTB
+0041   2806           00104         GOTO BUCLE
+                      00105         
+0042                  00106 B6
+0042   3082           00107         MOVLW b'10000010'
+                      00108                 ;gfedcba
+0043   0086           00109         MOVWF PORTB
+0044   2806           00110         GOTO BUCLE
+                      00111         
+0045                  00112 B7
+0045   30F8           00113         MOVLW b'11111000'
+                      00114                 ;gfedcba
+0046   0086           00115         MOVWF PORTB
+0047   2806           00116         GOTO BUCLE
+                      00117         
+0048                  00118 B8
+0048   3080           00119         MOVLW b'10000000'
+                      00120                 ;gfedcba
+0049   0086           00121         MOVWF PORTB
+004A   2806           00122         GOTO BUCLE
+                      00123         
+004B                  00124 B9
+004B   3090           00125         MOVLW b'10010000'
+                      00126                 ;gfedcba
+004C   0086           00127         MOVWF PORTB
+004D   2806           00128         GOTO BUCLE
+                      00129         
+004E                  00130 NOBCD
+                      00131         
+004E   3000           00132         MOVLW b'00000000'
+004F   0086           00133         MOVWF PORTB
+0050   0103           00134         CLRW
+0051   2806           00135         GOTO BUCLE
+                      00136         
+                      00137         
+Warning[205]: Found directive in column 1. (END)
+                      00138 END
+MPASM  5.50            5CV25_4_5_BCD_7SEG.ASM   3-8-2022  23:57:25         PAGE  4
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+B0                                00000030
+B1                                00000033
+B2                                00000036
+B3                                00000039
+B4                                0000003C
+B5                                0000003F
+B6                                00000042
+B7                                00000045
+B8                                00000048
+B9                                0000004B
+BUCLE                             00000006
+C                                 00000000
+DC                                00000001
+EEADR                             00000009
+EECON1                            00000088
+EECON2                            00000089
+EEDATA                            00000008
+EEIE                              00000006
+EEIF                              00000004
+F                                 00000001
+FSR                               00000004
+GIE                               00000007
+INDF                              00000000
+INTCON                            0000000B
+INTE                              00000004
+INTEDG                            00000006
+INTF                              00000001
+IRP                               00000007
+NOBCD                             0000004E
+NOT_PD                            00000003
+NOT_RBPU                          00000007
+NOT_TO                            00000004
+OPTION_REG                        00000081
+PCL                               00000002
+PCLATH                            0000000A
+PORTA                             00000005
+PORTB                             00000006
+PS0                               00000000
+PS1                               00000001
+PS2                               00000002
+PSA                               00000003
+RA0                               00000000
+RA1                               00000001
+RA2                               00000002
+RA3                               00000003
+RA4                               00000004
+RB0                               00000000
+RB1                               00000001
+RB2                               00000002
+RB3                               00000003
+RB4                               00000004
+RB5                               00000005
+RB6                               00000006
+MPASM  5.50            5CV25_4_5_BCD_7SEG.ASM   3-8-2022  23:57:25         PAGE  5
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+RB7                               00000007
+RBIE                              00000003
+RBIF                              00000000
+RD                                00000000
+RP0                               00000005
+RP1                               00000006
+STATUS                            00000003
+T0CS                              00000005
+T0IE                              00000005
+T0IF                              00000002
+T0SE                              00000004
+TEMP                              0000000C
+TMR0                              00000001
+TMR0IE                            00000005
+TMR0IF                            00000002
+TRISA                             00000085
+TRISA0                            00000000
+TRISA1                            00000001
+TRISA2                            00000002
+TRISA3                            00000003
+TRISA4                            00000004
+TRISB                             00000086
+TRISB0                            00000000
+TRISB1                            00000001
+TRISB2                            00000002
+TRISB3                            00000003
+TRISB4                            00000004
+TRISB5                            00000005
+TRISB6                            00000006
+TRISB7                            00000007
+W                                 00000000
+WR                                00000001
+WREN                              00000002
+WRERR                             00000003
+Z                                 00000002
+_CONFIG                           00002007
+_CP_OFF                           00003FFF
+_CP_ON                            0000000F
+_FOSC_EXTRC                       00003FFF
+_FOSC_HS                          00003FFE
+_FOSC_LP                          00003FFC
+_FOSC_XT                          00003FFD
+_HS_OSC                           00003FFE
+_IDLOC0                           00002000
+_IDLOC1                           00002001
+_IDLOC2                           00002002
+_IDLOC3                           00002003
+_LP_OSC                           00003FFC
+_PWRTE_OFF                        00003FFF
+_PWRTE_ON                         00003FF7
+_RC_OSC                           00003FFF
+_WDTE_OFF                         00003FFB
+_WDTE_ON                          00003FFF
+MPASM  5.50            5CV25_4_5_BCD_7SEG.ASM   3-8-2022  23:57:25         PAGE  6
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+_WDT_OFF                          00003FFB
+_WDT_ON                           00003FFF
+_XT_OSC                           00003FFD
+__16F84A                          00000001
+
+
+MEMORY USAGE MAP ('X' = Used,  '-' = Unused)
+
+0000 : XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX
+0040 : XXXXXXXXXXXXXXXX XX-------------- ---------------- ----------------
+
+All other memory blocks unused.
+
+Program Memory Words Used:    82
+Program Memory Words Free:   942
+
+
+Errors   :     0
+Warnings :     7 reported,     0 suppressed
+Messages :     3 reported,     0 suppressed
+
+

@@ -1,0 +1,871 @@
+
+
+Microchip MPLAB XC8 Assembler V2.36 build 20220127204148 
+                                                                                               Fri Mar 25 18:41:56 2022
+
+Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1 
+     1                           	processor	16F84A
+     2                           	pagewidth 120
+     3                           	opt	flic
+     4                           	psect	cinit,global,class=CODE,merge=1,delta=2
+     5                           	psect	cstackCOMMON,global,class=COMMON,space=1,delta=1,noexec
+     6                           	psect	cstackBANK0,global,class=BANK0,space=1,delta=1,noexec
+     7                           	psect	maintext,global,class=CODE,split=1,delta=2
+     8                           	psect	idloc,global,abs,ovrld,class=IDLOC,space=5,delta=2,noexec
+     9                           	psect	config,global,abs,ovrld,class=CONFIG,space=4,delta=2,noexec
+    10                           	dabs	1,0x4E,2
+    11  0000                     
+    12                           ; Version 2.40
+    13                           ; Generated 17/11/2021 GMT
+    14                           ; 
+    15                           ; Copyright © 2021, Microchip Technology Inc. and its subsidiaries ("Microchip")
+    16                           ; All rights reserved.
+    17                           ; 
+    18                           ; This software is developed by Microchip Technology Inc. and its subsidiaries ("Microch
+      +                          ip").
+    19                           ; 
+    20                           ; Redistribution and use in source and binary forms, with or without modification, are
+    21                           ; permitted provided that the following conditions are met:
+    22                           ; 
+    23                           ;     1. Redistributions of source code must retain the above copyright notice, this lis
+      +                          t of
+    24                           ;        conditions and the following disclaimer.
+    25                           ; 
+    26                           ;     2. Redistributions in binary form must reproduce the above copyright notice, this 
+      +                          list
+    27                           ;        of conditions and the following disclaimer in the documentation and/or other
+    28                           ;        materials provided with the distribution. Publication is not required when
+    29                           ;        this file is used in an embedded application.
+    30                           ; 
+    31                           ;     3. Microchip's name may not be used to endorse or promote products derived from th
+      +                          is
+    32                           ;        software without specific prior written permission.
+    33                           ; 
+    34                           ; THIS SOFTWARE IS PROVIDED BY MICROCHIP "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+    35                           ; INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS F
+      +                          OR
+    36                           ; PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL MICROCHIP BE LIABLE FOR ANY DIRECT, INDIREC
+      +                          T,
+    37                           ; INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING BUT NOT LIMITED TO
+    38                           ; PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA OR PROFITS; OR BUSINESS
+    39                           ; INTERRUPTION) HOWSOEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, ST
+      +                          RICT
+    40                           ; LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE U
+      +                          SE OF
+    41                           ; THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+    42                           ; 
+    43                           ; 
+    44                           ; Code-generator required, PIC16F84A Definitions
+    45                           ; 
+    46                           ; SFR Addresses
+    47  0000                     	;# 
+    48  0001                     	;# 
+    49  0002                     	;# 
+    50  0003                     	;# 
+    51  0004                     	;# 
+    52  0005                     	;# 
+    53  0006                     	;# 
+    54  0008                     	;# 
+    55  0009                     	;# 
+    56  000A                     	;# 
+    57  000B                     	;# 
+    58  0081                     	;# 
+    59  0085                     	;# 
+    60  0086                     	;# 
+    61  0088                     	;# 
+    62  0089                     	;# 
+    63  0000                     	;# 
+    64  0001                     	;# 
+    65  0002                     	;# 
+    66  0003                     	;# 
+    67  0004                     	;# 
+    68  0005                     	;# 
+    69  0006                     	;# 
+    70  0008                     	;# 
+    71  0009                     	;# 
+    72  000A                     	;# 
+    73  000B                     	;# 
+    74  0081                     	;# 
+    75  0085                     	;# 
+    76  0086                     	;# 
+    77  0088                     	;# 
+    78  0089                     	;# 
+    79  0005                     _PORTA	set	5
+    80  0006                     _PORTB	set	6
+    81  0086                     _TRISB	set	134
+    82  0085                     _TRISA	set	133
+    83                           
+    84                           	psect	cinit
+    85  03FE                     start_initialization:	
+    86                           ; #config settings
+    87                           
+    88  03FE                     __initialization:
+    89  03FE                     end_of_initialization:	
+    90                           ;End of C runtime variable initialization code
+    91                           
+    92  03FE                     __end_of__initialization:
+    93  03FE  0183               	clrf	3
+    94  03FF  2AD8               	ljmp	_main	;jump to C main() function
+    95                           
+    96                           	psect	cstackCOMMON
+    97  0000                     __pcstackCOMMON:
+    98  0000                     ??_main:
+    99                           
+   100                           	psect	cstackBANK0
+   101  0000                     __pcstackBANK0:	
+   102                           ; 1 bytes @ 0x0
+   103                           
+   104  0000                     ?_main:
+   105                           
+   106                           	psect	maintext
+   107  02D8                     __pmaintext:	
+   108                           ; 1 bytes @ 0x0
+   109 ;;
+   110 ;;Main: autosize = 0, tempsize = 0, incstack = 0, save=0
+   111 ;;
+   112 ;; *************** function _main *****************
+   113 ;; Defined at:
+   114 ;;		line 33 in file "main.c"
+   115 ;; Parameters:    Size  Location     Type
+   116 ;;		None
+   117 ;; Auto vars:     Size  Location     Type
+   118 ;;		None
+   119 ;; Return value:  Size  Location     Type
+   120 ;;                  1    wreg      void 
+   121 ;; Registers used:
+   122 ;;		wreg, status,2, status,0
+   123 ;; Tracked objects:
+   124 ;;		On entry : B00/0
+   125 ;;		On exit  : 0/0
+   126 ;;		Unchanged: 0/0
+   127 ;; Data sizes:     COMMON   BANK0
+   128 ;;      Params:         0       0
+   129 ;;      Locals:         0       0
+   130 ;;      Temps:          0       0
+   131 ;;      Totals:         0       0
+   132 ;;Total ram usage:        0 bytes
+   133 ;; This function calls:
+   134 ;;		Nothing
+   135 ;; This function is called by:
+   136 ;;		Startup code after reset
+   137 ;; This function uses a non-reentrant model
+   138 ;;
+   139                           
+   140  02D8                     _main:	
+   141                           ;psect for function _main
+   142                           
+   143  02D8                     l813:	
+   144                           ;incstack = 0
+   145                           ; Regs used in _main: [wreg+status,2+status,0]
+   146                           
+   147                           
+   148                           ;main.c: 38:     TRISA = 1;
+   149  02D8  3001               	movlw	1
+   150  02D9  1683               	bsf	3,5	;RP0=1, select bank1
+   151  02DA  0085               	movwf	5	;volatile
+   152  02DB                     l815:
+   153                           
+   154                           ;main.c: 39:     TRISB = 0;
+   155  02DB  0186               	clrf	6	;volatile
+   156  02DC                     l817:
+   157                           
+   158                           ;main.c: 47:     {;main.c: 48:         if (PORTA == 0b00000)
+   159  02DC  1283               	bcf	3,5	;RP0=0, select bank0
+   160  02DD  0805               	movf	5,w	;volatile
+   161  02DE  1D03               	btfss	3,2
+   162  02DF  2AE1               	goto	u331
+   163  02E0  2AE2               	goto	u330
+   164  02E1                     u331:
+   165  02E1  2AE4               	goto	l821
+   166  02E2                     u330:
+   167  02E2                     l819:
+   168                           
+   169                           ;main.c: 49:         {;main.c: 50:             PORTB = 0b00000000;
+   170  02E2  0186               	clrf	6	;volatile
+   171                           
+   172                           ;main.c: 51:         }
+   173  02E3  2ADC               	goto	l817
+   174  02E4                     l821:
+   175  02E4  0305               	decf	5,w	;volatile
+   176  02E5  1D03               	btfss	3,2
+   177  02E6  2AE8               	goto	u341
+   178  02E7  2AE9               	goto	u340
+   179  02E8                     u341:
+   180  02E8  2AEC               	goto	l825
+   181  02E9                     u340:
+   182  02E9                     l823:
+   183                           
+   184                           ;main.c: 53:         {;main.c: 54:             PORTB = 0b00000001;
+   185  02E9  3001               	movlw	1
+   186  02EA  0086               	movwf	6	;volatile
+   187                           
+   188                           ;main.c: 55:         }
+   189  02EB  2ADC               	goto	l817
+   190  02EC                     l825:
+   191  02EC  3002               	movlw	2
+   192  02ED  0605               	xorwf	5,w	;volatile
+   193  02EE  1D03               	btfss	3,2
+   194  02EF  2AF1               	goto	u351
+   195  02F0  2AF2               	goto	u350
+   196  02F1                     u351:
+   197  02F1  2AF5               	goto	l829
+   198  02F2                     u350:
+   199  02F2                     l827:
+   200                           
+   201                           ;main.c: 57:         {;main.c: 58:             PORTB = 0b00000010;
+   202  02F2  3002               	movlw	2
+   203  02F3  0086               	movwf	6	;volatile
+   204                           
+   205                           ;main.c: 59:         }
+   206  02F4  2ADC               	goto	l817
+   207  02F5                     l829:
+   208  02F5  3003               	movlw	3
+   209  02F6  0605               	xorwf	5,w	;volatile
+   210  02F7  1D03               	btfss	3,2
+   211  02F8  2AFA               	goto	u361
+   212  02F9  2AFB               	goto	u360
+   213  02FA                     u361:
+   214  02FA  2AFE               	goto	l833
+   215  02FB                     u360:
+   216  02FB                     l831:
+   217                           
+   218                           ;main.c: 61:         {;main.c: 62:             PORTB = 0b00000011;
+   219  02FB  3003               	movlw	3
+   220  02FC  0086               	movwf	6	;volatile
+   221                           
+   222                           ;main.c: 63:         }
+   223  02FD  2ADC               	goto	l817
+   224  02FE                     l833:
+   225  02FE  3004               	movlw	4
+   226  02FF  0605               	xorwf	5,w	;volatile
+   227  0300  1D03               	btfss	3,2
+   228  0301  2B03               	goto	u371
+   229  0302  2B04               	goto	u370
+   230  0303                     u371:
+   231  0303  2B07               	goto	l837
+   232  0304                     u370:
+   233  0304                     l835:
+   234                           
+   235                           ;main.c: 65:         {;main.c: 66:             PORTB = 0b00000100;
+   236  0304  3004               	movlw	4
+   237  0305  0086               	movwf	6	;volatile
+   238                           
+   239                           ;main.c: 67:         }
+   240  0306  2ADC               	goto	l817
+   241  0307                     l837:
+   242  0307  3005               	movlw	5
+   243  0308  0605               	xorwf	5,w	;volatile
+   244  0309  1D03               	btfss	3,2
+   245  030A  2B0C               	goto	u381
+   246  030B  2B0D               	goto	u380
+   247  030C                     u381:
+   248  030C  2B10               	goto	l841
+   249  030D                     u380:
+   250  030D                     l839:
+   251                           
+   252                           ;main.c: 69:         {;main.c: 70:             PORTB = 0b00000101;
+   253  030D  3005               	movlw	5
+   254  030E  0086               	movwf	6	;volatile
+   255                           
+   256                           ;main.c: 71:         }
+   257  030F  2ADC               	goto	l817
+   258  0310                     l841:
+   259  0310  3006               	movlw	6
+   260  0311  0605               	xorwf	5,w	;volatile
+   261  0312  1D03               	btfss	3,2
+   262  0313  2B15               	goto	u391
+   263  0314  2B16               	goto	u390
+   264  0315                     u391:
+   265  0315  2B19               	goto	l845
+   266  0316                     u390:
+   267  0316                     l843:
+   268                           
+   269                           ;main.c: 73:         {;main.c: 74:             PORTB = 0b00000110;
+   270  0316  3006               	movlw	6
+   271  0317  0086               	movwf	6	;volatile
+   272                           
+   273                           ;main.c: 75:         }
+   274  0318  2ADC               	goto	l817
+   275  0319                     l845:
+   276  0319  3007               	movlw	7
+   277  031A  0605               	xorwf	5,w	;volatile
+   278  031B  1D03               	btfss	3,2
+   279  031C  2B1E               	goto	u401
+   280  031D  2B1F               	goto	u400
+   281  031E                     u401:
+   282  031E  2B22               	goto	l849
+   283  031F                     u400:
+   284  031F                     l847:
+   285                           
+   286                           ;main.c: 77:         {;main.c: 78:             PORTB = 0b00000111;
+   287  031F  3007               	movlw	7
+   288  0320  0086               	movwf	6	;volatile
+   289                           
+   290                           ;main.c: 79:         }
+   291  0321  2ADC               	goto	l817
+   292  0322                     l849:
+   293  0322  3008               	movlw	8
+   294  0323  0605               	xorwf	5,w	;volatile
+   295  0324  1D03               	btfss	3,2
+   296  0325  2B27               	goto	u411
+   297  0326  2B28               	goto	u410
+   298  0327                     u411:
+   299  0327  2B2B               	goto	l853
+   300  0328                     u410:
+   301  0328                     l851:
+   302                           
+   303                           ;main.c: 81:         {;main.c: 82:             PORTB = 0b00010000;
+   304  0328  3010               	movlw	16
+   305  0329  0086               	movwf	6	;volatile
+   306                           
+   307                           ;main.c: 83:         }
+   308  032A  2ADC               	goto	l817
+   309  032B                     l853:
+   310  032B  3009               	movlw	9
+   311  032C  0605               	xorwf	5,w	;volatile
+   312  032D  1D03               	btfss	3,2
+   313  032E  2B30               	goto	u421
+   314  032F  2B31               	goto	u420
+   315  0330                     u421:
+   316  0330  2B34               	goto	l857
+   317  0331                     u420:
+   318  0331                     l855:
+   319                           
+   320                           ;main.c: 85:         {;main.c: 86:             PORTB = 0b00010001;
+   321  0331  3011               	movlw	17
+   322  0332  0086               	movwf	6	;volatile
+   323                           
+   324                           ;main.c: 87:         }
+   325  0333  2ADC               	goto	l817
+   326  0334                     l857:
+   327  0334  300A               	movlw	10
+   328  0335  0605               	xorwf	5,w	;volatile
+   329  0336  1D03               	btfss	3,2
+   330  0337  2B39               	goto	u431
+   331  0338  2B3A               	goto	u430
+   332  0339                     u431:
+   333  0339  2B3D               	goto	l861
+   334  033A                     u430:
+   335  033A                     l859:
+   336                           
+   337                           ;main.c: 89:         {;main.c: 90:             PORTB = 0b00010010;
+   338  033A  3012               	movlw	18
+   339  033B  0086               	movwf	6	;volatile
+   340                           
+   341                           ;main.c: 91:         }
+   342  033C  2ADC               	goto	l817
+   343  033D                     l861:
+   344  033D  300B               	movlw	11
+   345  033E  0605               	xorwf	5,w	;volatile
+   346  033F  1D03               	btfss	3,2
+   347  0340  2B42               	goto	u441
+   348  0341  2B43               	goto	u440
+   349  0342                     u441:
+   350  0342  2B46               	goto	l865
+   351  0343                     u440:
+   352  0343                     l863:
+   353                           
+   354                           ;main.c: 93:         {;main.c: 94:             PORTB = 0b00010011;
+   355  0343  3013               	movlw	19
+   356  0344  0086               	movwf	6	;volatile
+   357                           
+   358                           ;main.c: 95:         }
+   359  0345  2ADC               	goto	l817
+   360  0346                     l865:
+   361  0346  300C               	movlw	12
+   362  0347  0605               	xorwf	5,w	;volatile
+   363  0348  1D03               	btfss	3,2
+   364  0349  2B4B               	goto	u451
+   365  034A  2B4C               	goto	u450
+   366  034B                     u451:
+   367  034B  2B4F               	goto	l869
+   368  034C                     u450:
+   369  034C                     l867:
+   370                           
+   371                           ;main.c: 97:         {;main.c: 98:             PORTB = 0b00010100;
+   372  034C  3014               	movlw	20
+   373  034D  0086               	movwf	6	;volatile
+   374                           
+   375                           ;main.c: 99:         }
+   376  034E  2ADC               	goto	l817
+   377  034F                     l869:
+   378  034F  300D               	movlw	13
+   379  0350  0605               	xorwf	5,w	;volatile
+   380  0351  1D03               	btfss	3,2
+   381  0352  2B54               	goto	u461
+   382  0353  2B55               	goto	u460
+   383  0354                     u461:
+   384  0354  2B58               	goto	l873
+   385  0355                     u460:
+   386  0355                     l871:
+   387                           
+   388                           ;main.c: 101:         {;main.c: 102:             PORTB = 0b00010101;
+   389  0355  3015               	movlw	21
+   390  0356  0086               	movwf	6	;volatile
+   391                           
+   392                           ;main.c: 103:         }
+   393  0357  2ADC               	goto	l817
+   394  0358                     l873:
+   395  0358  300E               	movlw	14
+   396  0359  0605               	xorwf	5,w	;volatile
+   397  035A  1D03               	btfss	3,2
+   398  035B  2B5D               	goto	u471
+   399  035C  2B5E               	goto	u470
+   400  035D                     u471:
+   401  035D  2B61               	goto	l877
+   402  035E                     u470:
+   403  035E                     l875:
+   404                           
+   405                           ;main.c: 105:         {;main.c: 106:             PORTB = 0b00010110;
+   406  035E  3016               	movlw	22
+   407  035F  0086               	movwf	6	;volatile
+   408                           
+   409                           ;main.c: 107:         }
+   410  0360  2ADC               	goto	l817
+   411  0361                     l877:
+   412  0361  300F               	movlw	15
+   413  0362  0605               	xorwf	5,w	;volatile
+   414  0363  1D03               	btfss	3,2
+   415  0364  2B66               	goto	u481
+   416  0365  2B67               	goto	u480
+   417  0366                     u481:
+   418  0366  2B6A               	goto	l881
+   419  0367                     u480:
+   420  0367                     l879:
+   421                           
+   422                           ;main.c: 109:         {;main.c: 110:             PORTB = 0b00010111;
+   423  0367  3017               	movlw	23
+   424  0368  0086               	movwf	6	;volatile
+   425                           
+   426                           ;main.c: 111:         }
+   427  0369  2ADC               	goto	l817
+   428  036A                     l881:
+   429  036A  3010               	movlw	16
+   430  036B  0605               	xorwf	5,w	;volatile
+   431  036C  1D03               	btfss	3,2
+   432  036D  2B6F               	goto	u491
+   433  036E  2B70               	goto	u490
+   434  036F                     u491:
+   435  036F  2B73               	goto	l885
+   436  0370                     u490:
+   437  0370                     l883:
+   438                           
+   439                           ;main.c: 113:         {;main.c: 114:             PORTB = 0b00100000;
+   440  0370  3020               	movlw	32
+   441  0371  0086               	movwf	6	;volatile
+   442                           
+   443                           ;main.c: 115:         }
+   444  0372  2ADC               	goto	l817
+   445  0373                     l885:
+   446  0373  3011               	movlw	17
+   447  0374  0605               	xorwf	5,w	;volatile
+   448  0375  1D03               	btfss	3,2
+   449  0376  2B78               	goto	u501
+   450  0377  2B79               	goto	u500
+   451  0378                     u501:
+   452  0378  2B7C               	goto	l889
+   453  0379                     u500:
+   454  0379                     l887:
+   455                           
+   456                           ;main.c: 117:         {;main.c: 118:             PORTB = 0b00100001;
+   457  0379  3021               	movlw	33
+   458  037A  0086               	movwf	6	;volatile
+   459                           
+   460                           ;main.c: 119:         }
+   461  037B  2ADC               	goto	l817
+   462  037C                     l889:
+   463  037C  3012               	movlw	18
+   464  037D  0605               	xorwf	5,w	;volatile
+   465  037E  1D03               	btfss	3,2
+   466  037F  2B81               	goto	u511
+   467  0380  2B82               	goto	u510
+   468  0381                     u511:
+   469  0381  2B85               	goto	l893
+   470  0382                     u510:
+   471  0382                     l891:
+   472                           
+   473                           ;main.c: 121:         {;main.c: 122:             PORTB = 0b00100010;
+   474  0382  3022               	movlw	34
+   475  0383  0086               	movwf	6	;volatile
+   476                           
+   477                           ;main.c: 123:         }
+   478  0384  2ADC               	goto	l817
+   479  0385                     l893:
+   480  0385  3013               	movlw	19
+   481  0386  0605               	xorwf	5,w	;volatile
+   482  0387  1D03               	btfss	3,2
+   483  0388  2B8A               	goto	u521
+   484  0389  2B8B               	goto	u520
+   485  038A                     u521:
+   486  038A  2B8E               	goto	l897
+   487  038B                     u520:
+   488  038B                     l895:
+   489                           
+   490                           ;main.c: 125:         {;main.c: 126:             PORTB = 0b00100011;
+   491  038B  3023               	movlw	35
+   492  038C  0086               	movwf	6	;volatile
+   493                           
+   494                           ;main.c: 127:         }
+   495  038D  2ADC               	goto	l817
+   496  038E                     l897:
+   497  038E  3014               	movlw	20
+   498  038F  0605               	xorwf	5,w	;volatile
+   499  0390  1D03               	btfss	3,2
+   500  0391  2B93               	goto	u531
+   501  0392  2B94               	goto	u530
+   502  0393                     u531:
+   503  0393  2B97               	goto	l901
+   504  0394                     u530:
+   505  0394                     l899:
+   506                           
+   507                           ;main.c: 129:         {;main.c: 130:             PORTB = 0b00100100;
+   508  0394  3024               	movlw	36
+   509  0395  0086               	movwf	6	;volatile
+   510                           
+   511                           ;main.c: 131:         }
+   512  0396  2ADC               	goto	l817
+   513  0397                     l901:
+   514  0397  3015               	movlw	21
+   515  0398  0605               	xorwf	5,w	;volatile
+   516  0399  1D03               	btfss	3,2
+   517  039A  2B9C               	goto	u541
+   518  039B  2B9D               	goto	u540
+   519  039C                     u541:
+   520  039C  2BA0               	goto	l905
+   521  039D                     u540:
+   522  039D                     l903:
+   523                           
+   524                           ;main.c: 133:         {;main.c: 134:             PORTB = 0b00100101;
+   525  039D  3025               	movlw	37
+   526  039E  0086               	movwf	6	;volatile
+   527                           
+   528                           ;main.c: 135:         }
+   529  039F  2ADC               	goto	l817
+   530  03A0                     l905:
+   531  03A0  3016               	movlw	22
+   532  03A1  0605               	xorwf	5,w	;volatile
+   533  03A2  1D03               	btfss	3,2
+   534  03A3  2BA5               	goto	u551
+   535  03A4  2BA6               	goto	u550
+   536  03A5                     u551:
+   537  03A5  2BA9               	goto	l909
+   538  03A6                     u550:
+   539  03A6                     l907:
+   540                           
+   541                           ;main.c: 137:         {;main.c: 138:             PORTB = 0b00100110;
+   542  03A6  3026               	movlw	38
+   543  03A7  0086               	movwf	6	;volatile
+   544                           
+   545                           ;main.c: 139:         }
+   546  03A8  2ADC               	goto	l817
+   547  03A9                     l909:
+   548  03A9  3017               	movlw	23
+   549  03AA  0605               	xorwf	5,w	;volatile
+   550  03AB  1D03               	btfss	3,2
+   551  03AC  2BAE               	goto	u561
+   552  03AD  2BAF               	goto	u560
+   553  03AE                     u561:
+   554  03AE  2BB2               	goto	l913
+   555  03AF                     u560:
+   556  03AF                     l911:
+   557                           
+   558                           ;main.c: 141:         {;main.c: 142:             PORTB = 0b00100111;
+   559  03AF  3027               	movlw	39
+   560  03B0  0086               	movwf	6	;volatile
+   561                           
+   562                           ;main.c: 143:         }
+   563  03B1  2ADC               	goto	l817
+   564  03B2                     l913:
+   565  03B2  3018               	movlw	24
+   566  03B3  0605               	xorwf	5,w	;volatile
+   567  03B4  1D03               	btfss	3,2
+   568  03B5  2BB7               	goto	u571
+   569  03B6  2BB8               	goto	u570
+   570  03B7                     u571:
+   571  03B7  2BBB               	goto	l917
+   572  03B8                     u570:
+   573  03B8                     l915:
+   574                           
+   575                           ;main.c: 145:         {;main.c: 146:             PORTB = 0b00110000;
+   576  03B8  3030               	movlw	48
+   577  03B9  0086               	movwf	6	;volatile
+   578                           
+   579                           ;main.c: 147:         }
+   580  03BA  2ADC               	goto	l817
+   581  03BB                     l917:
+   582  03BB  3019               	movlw	25
+   583  03BC  0605               	xorwf	5,w	;volatile
+   584  03BD  1D03               	btfss	3,2
+   585  03BE  2BC0               	goto	u581
+   586  03BF  2BC1               	goto	u580
+   587  03C0                     u581:
+   588  03C0  2BC4               	goto	l921
+   589  03C1                     u580:
+   590  03C1                     l919:
+   591                           
+   592                           ;main.c: 149:         {;main.c: 150:             PORTB = 0b00110001;
+   593  03C1  3031               	movlw	49
+   594  03C2  0086               	movwf	6	;volatile
+   595                           
+   596                           ;main.c: 151:         }
+   597  03C3  2ADC               	goto	l817
+   598  03C4                     l921:
+   599  03C4  301A               	movlw	26
+   600  03C5  0605               	xorwf	5,w	;volatile
+   601  03C6  1D03               	btfss	3,2
+   602  03C7  2BC9               	goto	u591
+   603  03C8  2BCA               	goto	u590
+   604  03C9                     u591:
+   605  03C9  2BCD               	goto	l925
+   606  03CA                     u590:
+   607  03CA                     l923:
+   608                           
+   609                           ;main.c: 153:         {;main.c: 154:             PORTB = 0b00110010;
+   610  03CA  3032               	movlw	50
+   611  03CB  0086               	movwf	6	;volatile
+   612                           
+   613                           ;main.c: 155:         }
+   614  03CC  2ADC               	goto	l817
+   615  03CD                     l925:
+   616  03CD  301B               	movlw	27
+   617  03CE  0605               	xorwf	5,w	;volatile
+   618  03CF  1D03               	btfss	3,2
+   619  03D0  2BD2               	goto	u601
+   620  03D1  2BD3               	goto	u600
+   621  03D2                     u601:
+   622  03D2  2BD6               	goto	l929
+   623  03D3                     u600:
+   624  03D3                     l927:
+   625                           
+   626                           ;main.c: 157:         {;main.c: 158:             PORTB = 0b00110011;
+   627  03D3  3033               	movlw	51
+   628  03D4  0086               	movwf	6	;volatile
+   629                           
+   630                           ;main.c: 159:         }
+   631  03D5  2ADC               	goto	l817
+   632  03D6                     l929:
+   633  03D6  301C               	movlw	28
+   634  03D7  0605               	xorwf	5,w	;volatile
+   635  03D8  1D03               	btfss	3,2
+   636  03D9  2BDB               	goto	u611
+   637  03DA  2BDC               	goto	u610
+   638  03DB                     u611:
+   639  03DB  2BDF               	goto	l933
+   640  03DC                     u610:
+   641  03DC                     l931:
+   642                           
+   643                           ;main.c: 161:         {;main.c: 162:             PORTB = 0b00110100;
+   644  03DC  3034               	movlw	52
+   645  03DD  0086               	movwf	6	;volatile
+   646                           
+   647                           ;main.c: 163:         }
+   648  03DE  2ADC               	goto	l817
+   649  03DF                     l933:
+   650  03DF  301D               	movlw	29
+   651  03E0  0605               	xorwf	5,w	;volatile
+   652  03E1  1D03               	btfss	3,2
+   653  03E2  2BE4               	goto	u621
+   654  03E3  2BE5               	goto	u620
+   655  03E4                     u621:
+   656  03E4  2BE8               	goto	l937
+   657  03E5                     u620:
+   658  03E5                     l935:
+   659                           
+   660                           ;main.c: 165:         {;main.c: 166:             PORTB = 0b00110101;
+   661  03E5  3035               	movlw	53
+   662  03E6  0086               	movwf	6	;volatile
+   663                           
+   664                           ;main.c: 167:         }
+   665  03E7  2ADC               	goto	l817
+   666  03E8                     l937:
+   667  03E8  301E               	movlw	30
+   668  03E9  0605               	xorwf	5,w	;volatile
+   669  03EA  1D03               	btfss	3,2
+   670  03EB  2BED               	goto	u631
+   671  03EC  2BEE               	goto	u630
+   672  03ED                     u631:
+   673  03ED  2BF1               	goto	l941
+   674  03EE                     u630:
+   675  03EE                     l939:
+   676                           
+   677                           ;main.c: 169:         {;main.c: 170:             PORTB = 0b00110110;
+   678  03EE  3036               	movlw	54
+   679  03EF  0086               	movwf	6	;volatile
+   680                           
+   681                           ;main.c: 171:         }
+   682  03F0  2ADC               	goto	l817
+   683  03F1                     l941:
+   684  03F1  301F               	movlw	31
+   685  03F2  0605               	xorwf	5,w	;volatile
+   686  03F3  1D03               	btfss	3,2
+   687  03F4  2BF6               	goto	u641
+   688  03F5  2BF7               	goto	u640
+   689  03F6                     u641:
+   690  03F6  2BFA               	goto	l945
+   691  03F7                     u640:
+   692  03F7                     l943:
+   693                           
+   694                           ;main.c: 173:         {;main.c: 174:             PORTB = 0b00110111;
+   695  03F7  3037               	movlw	55
+   696  03F8  0086               	movwf	6	;volatile
+   697                           
+   698                           ;main.c: 175:         }
+   699  03F9  2ADC               	goto	l817
+   700  03FA                     l945:
+   701                           
+   702                           ;main.c: 178:         {;main.c: 179:             PORTB = 0b10001000;
+   703  03FA  3088               	movlw	136
+   704  03FB  0086               	movwf	6	;volatile
+   705  03FC  2ADC               	goto	l817
+   706  03FD  2800               	ljmp	start
+   707  03FE                     __end_of_main:
+   708  004E                     btemp	set	78	;btemp
+   709  004E                     wtemp0	set	78
+   710                           
+   711                           	psect	idloc
+   712                           
+   713                           ;Config register IDLOC0 @ 0x2000
+   714                           ;	unspecified, using default values
+   715  2000                     	org	8192
+   716  2000  3FFF               	dw	16383
+   717                           
+   718                           ;Config register IDLOC1 @ 0x2001
+   719                           ;	unspecified, using default values
+   720  2001                     	org	8193
+   721  2001  3FFF               	dw	16383
+   722                           
+   723                           ;Config register IDLOC2 @ 0x2002
+   724                           ;	unspecified, using default values
+   725  2002                     	org	8194
+   726  2002  3FFF               	dw	16383
+   727                           
+   728                           ;Config register IDLOC3 @ 0x2003
+   729                           ;	unspecified, using default values
+   730  2003                     	org	8195
+   731  2003  3FFF               	dw	16383
+   732                           
+   733                           	psect	config
+   734                           
+   735                           ;Config register CONFIG @ 0x2007
+   736                           ;	Oscillator Selection bits
+   737                           ;	FOSC = EXTRC, RC oscillator
+   738                           ;	Watchdog Timer
+   739                           ;	WDTE = ON, WDT enabled
+   740                           ;	Power-up Timer Enable bit
+   741                           ;	PWRTE = OFF, Power-up Timer is disabled
+   742                           ;	Code Protection bit
+   743                           ;	CP = OFF, Code protection disabled
+   744  2007                     	org	8199
+   745  2007  3FFF               	dw	16383
+
+Data Sizes:
+    Strings     0
+    Constant    0
+    Data        0
+    BSS         0
+    Persistent  0
+    Stack       0
+
+Auto Spaces:
+    Space          Size  Autos    Used
+    COMMON            0      0       0
+    BANK0            66      0       0
+
+Pointer List with Targets:
+
+    None.
+
+Critical Paths under _main in COMMON
+
+    None.
+
+Critical Paths under _main in BANK0
+
+    None.
+
+Call Graph Tables:
+
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (0) _main                                                 0     0      0       0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 0
+ ---------------------------------------------------------------------------------
+
+ Call Graph Graphs:
+
+ _main (ROOT)
+
+ Address spaces:
+Name               Size   Autos  Total    Cost      Usage
+BITCOMMON            0      0       0       0        0.0%
+EEDATA              40      0       0       0        0.0%
+NULL                 0      0       0       0        0.0%
+CODE                 0      0       0       0        0.0%
+BITSFR0              0      0       0       1        0.0%
+SFR0                 0      0       0       1        0.0%
+COMMON               0      0       0       1        0.0%
+BITSFR1              0      0       0       2        0.0%
+SFR1                 0      0       0       2        0.0%
+STACK                0      0       0       2        0.0%
+BANK0               42      0       0       3        0.0%
+ABS                  0      0       0       4        0.0%
+BITBANK0            42      0       0       5        0.0%
+DATA                 0      0       0       6        0.0%
+
+
+Microchip Technology PIC Macro Assembler V2.36 build 20220127204148 
+Symbol Table                                                                                   Fri Mar 25 18:41:56 2022
+
+                    l901 0397                      l821 02E4                      l813 02D8  
+                    l911 03AF                      l903 039D                      l831 02FB  
+                    l823 02E9                      l815 02DB                      l921 03C4  
+                    l913 03B2                      l905 03A0                      l841 0310  
+                    l833 02FE                      l825 02EC                      l817 02DC  
+                    l931 03DC                      l923 03CA                      l915 03B8  
+                    l907 03A6                      l851 0328                      l843 0316  
+                    l835 0304                      l827 02F2                      l819 02E2  
+                    l941 03F1                      l933 03DF                      l925 03CD  
+                    l917 03BB                      l909 03A9                      l861 033D  
+                    l853 032B                      l845 0319                      l837 0307  
+                    l829 02F5                      l943 03F7                      l935 03E5  
+                    l927 03D3                      l919 03C1                      l871 0355  
+                    l863 0343                      l855 0331                      l847 031F  
+                    l839 030D                      l945 03FA                      l937 03E8  
+                    l929 03D6                      l881 036A                      l873 0358  
+                    l865 0346                      l857 0334                      l849 0322  
+                    l939 03EE                      l891 0382                      l883 0370  
+                    l875 035E                      l867 034C                      l859 033A  
+                    l893 0385                      l885 0373                      l877 0361  
+                    l869 034F                      l895 038B                      l887 0379  
+                    l879 0367                      l897 038E                      l889 037C  
+                    l899 0394                      u400 031F                      u401 031E  
+                    u410 0328                      u330 02E2                      u411 0327  
+                    u331 02E1                      u500 0379                      u420 0331  
+                    u340 02E9                      u501 0378                      u421 0330  
+                    u341 02E8                      u510 0382                      u430 033A  
+                    u350 02F2                      u511 0381                      u431 0339  
+                    u351 02F1                      u600 03D3                      u520 038B  
+                    u440 0343                      u360 02FB                      u601 03D2  
+                    u521 038A                      u441 0342                      u361 02FA  
+                    u610 03DC                      u530 0394                      u450 034C  
+                    u370 0304                      u611 03DB                      u531 0393  
+                    u451 034B                      u371 0303                      u620 03E5  
+                    u540 039D                      u460 0355                      u380 030D  
+                    u621 03E4                      u541 039C                      u461 0354  
+                    u381 030C                      u630 03EE                      u550 03A6  
+                    u470 035E                      u390 0316                      u631 03ED  
+                    u551 03A5                      u471 035D                      u391 0315  
+                    u640 03F7                      u560 03AF                      u480 0367  
+                    u641 03F6                      u561 03AE                      u481 0366  
+                    u570 03B8                      u490 0370                      u571 03B7  
+                    u491 036F                      u580 03C1                      u581 03C0  
+                    u590 03CA                      u591 03C9                     _main 02D8  
+                   btemp 004E                     start 0000                    ?_main 0000  
+                  _PORTA 0005                    _PORTB 0006                    _TRISA 0085  
+                  _TRISB 0086                    status 0003                    wtemp0 004E  
+        __initialization 03FE             __end_of_main 03FE                   ??_main 0000  
+__end_of__initialization 03FE           __pcstackCOMMON 0000               __pmaintext 02D8  
+   end_of_initialization 03FE      start_initialization 03FE                ___latbits 0000  
+          __pcstackBANK0 0000  

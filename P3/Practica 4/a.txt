@@ -1,0 +1,27 @@
+ Lcd_Out(1,1,"HOLA");
+         
+        __delay_ms(500);
+         
+         Lcd_Out(1,1,"-HOL");
+         
+        __delay_ms(500);
+         
+         Lcd_Out(1,1,"--HO");
+         
+         __delay_ms(500);
+         
+         Lcd_Out(1,1,"---H");
+         
+         __delay_ms(500);
+         
+         Lcd_Out(1,1,"----");
+         
+         __delay_ms(500);
+         
+         Lcd_Out(1,1,"----");
+         
+         __delay_ms(500);
+         
+         Lcd_Out(1,1,"----");
+         
+         __delay_ms(500);

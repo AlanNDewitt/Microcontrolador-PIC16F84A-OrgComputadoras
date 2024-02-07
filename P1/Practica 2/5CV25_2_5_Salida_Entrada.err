@@ -1,0 +1,10 @@
+Message[301] C:\PROGRAM FILES (X86)\MICROCHIP\MPASM SUITE\P16F84.INC 33 : MESSAGE: (Processor-header file mismatch.  Verify selected processor.)
+Warning[203] C:\USERS\EDGAR ALAN\DESKTOP\PRACTICA 2\5CV25_2_5_SALIDA_ENTRADA.ASM 4 : Found opcode in column 1. (BSF)
+Warning[203] C:\USERS\EDGAR ALAN\DESKTOP\PRACTICA 2\5CV25_2_5_SALIDA_ENTRADA.ASM 5 : Found opcode in column 1. (MOVLW)
+Warning[203] C:\USERS\EDGAR ALAN\DESKTOP\PRACTICA 2\5CV25_2_5_SALIDA_ENTRADA.ASM 6 : Found opcode in column 1. (MOVWF)
+Message[302] C:\USERS\EDGAR ALAN\DESKTOP\PRACTICA 2\5CV25_2_5_SALIDA_ENTRADA.ASM 6 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Warning[203] C:\USERS\EDGAR ALAN\DESKTOP\PRACTICA 2\5CV25_2_5_SALIDA_ENTRADA.ASM 8 : Found opcode in column 1. (MOVLW)
+Warning[203] C:\USERS\EDGAR ALAN\DESKTOP\PRACTICA 2\5CV25_2_5_SALIDA_ENTRADA.ASM 9 : Found opcode in column 1. (MOVWF)
+Message[302] C:\USERS\EDGAR ALAN\DESKTOP\PRACTICA 2\5CV25_2_5_SALIDA_ENTRADA.ASM 9 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Warning[203] C:\USERS\EDGAR ALAN\DESKTOP\PRACTICA 2\5CV25_2_5_SALIDA_ENTRADA.ASM 11 : Found opcode in column 1. (BCF)
+Warning[205] C:\USERS\EDGAR ALAN\DESKTOP\PRACTICA 2\5CV25_2_5_SALIDA_ENTRADA.ASM 56 : Found directive in column 1. (END)

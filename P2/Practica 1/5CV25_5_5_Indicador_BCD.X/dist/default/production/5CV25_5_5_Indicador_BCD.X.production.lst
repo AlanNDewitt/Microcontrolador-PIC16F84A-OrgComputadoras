@@ -1,0 +1,702 @@
+
+
+Microchip MPLAB XC8 Assembler V2.36 build 20220127204148 
+                                                                                               Wed Mar 23 15:48:55 2022
+
+Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1 
+     1                           	processor	16F84A
+     2                           	pagewidth 120
+     3                           	opt	flic
+     4                           	psect	cinit,global,class=CODE,merge=1,delta=2
+     5                           	psect	cstackCOMMON,global,class=COMMON,space=1,delta=1,noexec
+     6                           	psect	cstackBANK0,global,class=BANK0,space=1,delta=1,noexec
+     7                           	psect	maintext,global,class=CODE,split=1,delta=2
+     8                           	psect	text1,local,class=CODE,merge=1,delta=2
+     9                           	psect	text2,local,class=CODE,merge=1,delta=2
+    10                           	psect	idloc,global,abs,ovrld,class=IDLOC,space=5,delta=2,noexec
+    11                           	psect	config,global,abs,ovrld,class=CONFIG,space=4,delta=2,noexec
+    12                           	dabs	1,0x4E,2
+    13  0000                     
+    14                           ; Version 2.40
+    15                           ; Generated 17/11/2021 GMT
+    16                           ; 
+    17                           ; Copyright © 2021, Microchip Technology Inc. and its subsidiaries ("Microchip")
+    18                           ; All rights reserved.
+    19                           ; 
+    20                           ; This software is developed by Microchip Technology Inc. and its subsidiaries ("Microch
+      +                          ip").
+    21                           ; 
+    22                           ; Redistribution and use in source and binary forms, with or without modification, are
+    23                           ; permitted provided that the following conditions are met:
+    24                           ; 
+    25                           ;     1. Redistributions of source code must retain the above copyright notice, this lis
+      +                          t of
+    26                           ;        conditions and the following disclaimer.
+    27                           ; 
+    28                           ;     2. Redistributions in binary form must reproduce the above copyright notice, this 
+      +                          list
+    29                           ;        of conditions and the following disclaimer in the documentation and/or other
+    30                           ;        materials provided with the distribution. Publication is not required when
+    31                           ;        this file is used in an embedded application.
+    32                           ; 
+    33                           ;     3. Microchip's name may not be used to endorse or promote products derived from th
+      +                          is
+    34                           ;        software without specific prior written permission.
+    35                           ; 
+    36                           ; THIS SOFTWARE IS PROVIDED BY MICROCHIP "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+    37                           ; INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS F
+      +                          OR
+    38                           ; PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL MICROCHIP BE LIABLE FOR ANY DIRECT, INDIREC
+      +                          T,
+    39                           ; INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING BUT NOT LIMITED TO
+    40                           ; PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA OR PROFITS; OR BUSINESS
+    41                           ; INTERRUPTION) HOWSOEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, ST
+      +                          RICT
+    42                           ; LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE U
+      +                          SE OF
+    43                           ; THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+    44                           ; 
+    45                           ; 
+    46                           ; Code-generator required, PIC16F84A Definitions
+    47                           ; 
+    48                           ; SFR Addresses
+    49  0000                     	;# 
+    50  0001                     	;# 
+    51  0002                     	;# 
+    52  0003                     	;# 
+    53  0004                     	;# 
+    54  0005                     	;# 
+    55  0006                     	;# 
+    56  0008                     	;# 
+    57  0009                     	;# 
+    58  000A                     	;# 
+    59  000B                     	;# 
+    60  0081                     	;# 
+    61  0085                     	;# 
+    62  0086                     	;# 
+    63  0088                     	;# 
+    64  0089                     	;# 
+    65  0000                     	;# 
+    66  0001                     	;# 
+    67  0002                     	;# 
+    68  0003                     	;# 
+    69  0004                     	;# 
+    70  0005                     	;# 
+    71  0006                     	;# 
+    72  0008                     	;# 
+    73  0009                     	;# 
+    74  000A                     	;# 
+    75  000B                     	;# 
+    76  0081                     	;# 
+    77  0085                     	;# 
+    78  0086                     	;# 
+    79  0088                     	;# 
+    80  0089                     	;# 
+    81  0005                     _PORTA	set	5
+    82  0006                     _PORTB	set	6
+    83  0086                     _TRISB	set	134
+    84  0085                     _TRISA	set	133
+    85                           
+    86                           	psect	cinit
+    87  03FE                     start_initialization:	
+    88                           ; #config settings
+    89                           
+    90  03FE                     __initialization:
+    91  03FE                     end_of_initialization:	
+    92                           ;End of C runtime variable initialization code
+    93                           
+    94  03FE                     __end_of__initialization:
+    95  03FE  0183               	clrf	3
+    96  03FF  2BB1               	ljmp	_main	;jump to C main() function
+    97                           
+    98                           	psect	cstackCOMMON
+    99  0000                     __pcstackCOMMON:
+   100  0000                     ??_main:
+   101                           
+   102                           	psect	cstackBANK0
+   103  000C                     __pcstackBANK0:	
+   104                           ; 1 bytes @ 0x0
+   105                           
+   106  000C                     ?_sentido_reloj:
+   107  000C                     ??_sentido_reloj:	
+   108                           ; 1 bytes @ 0x0
+   109                           
+   110  000C                     ?_sentido_inverso_reloj:	
+   111                           ; 1 bytes @ 0x0
+   112                           
+   113  000C                     ??_sentido_inverso_reloj:	
+   114                           ; 1 bytes @ 0x0
+   115                           
+   116  000C                     ?_main:	
+   117                           ; 1 bytes @ 0x0
+   118                           
+   119                           
+   120                           ; 1 bytes @ 0x0
+   121  000C                     	ds	1
+   122                           
+   123                           	psect	maintext
+   124  03B1                     __pmaintext:	
+   125 ;;
+   126 ;;Main: autosize = 0, tempsize = 0, incstack = 0, save=0
+   127 ;;
+   128 ;; *************** function _main *****************
+   129 ;; Defined at:
+   130 ;;		line 47 in file "main.c"
+   131 ;; Parameters:    Size  Location     Type
+   132 ;;		None
+   133 ;; Auto vars:     Size  Location     Type
+   134 ;;		None
+   135 ;; Return value:  Size  Location     Type
+   136 ;;                  1    wreg      void 
+   137 ;; Registers used:
+   138 ;;		wreg, status,2, status,0, pclath, cstack
+   139 ;; Tracked objects:
+   140 ;;		On entry : B00/0
+   141 ;;		On exit  : 0/0
+   142 ;;		Unchanged: 0/0
+   143 ;; Data sizes:     COMMON   BANK0
+   144 ;;      Params:         0       0
+   145 ;;      Locals:         0       0
+   146 ;;      Temps:          0       0
+   147 ;;      Totals:         0       0
+   148 ;;Total ram usage:        0 bytes
+   149 ;; Hardware stack levels required when called: 1
+   150 ;; This function calls:
+   151 ;;		_sentido_inverso_reloj
+   152 ;;		_sentido_reloj
+   153 ;; This function is called by:
+   154 ;;		Startup code after reset
+   155 ;; This function uses a non-reentrant model
+   156 ;;
+   157                           
+   158  03B1                     _main:	
+   159                           ;psect for function _main
+   160                           
+   161  03B1                     l690:	
+   162                           ;incstack = 0
+   163                           ; Regs used in _main: [wreg+status,2+status,0+pclath+cstack]
+   164                           
+   165                           
+   166                           ;main.c: 52:     TRISA = 1;
+   167  03B1  3001               	movlw	1
+   168  03B2  1683               	bsf	3,5	;RP0=1, select bank1
+   169  03B3  0085               	movwf	5	;volatile
+   170  03B4                     l692:
+   171                           
+   172                           ;main.c: 53:     TRISB = 0;
+   173  03B4  0186               	clrf	6	;volatile
+   174  03B5                     l694:
+   175                           
+   176                           ;main.c: 61:     {;main.c: 62:         if (PORTA == 0b0000)
+   177  03B5  1283               	bcf	3,5	;RP0=0, select bank0
+   178  03B6  0805               	movf	5,w	;volatile
+   179  03B7  1D03               	btfss	3,2
+   180  03B8  2BBA               	goto	u111
+   181  03B9  2BBB               	goto	u110
+   182  03BA                     u111:
+   183  03BA  2BBD               	goto	l698
+   184  03BB                     u110:
+   185  03BB                     l696:
+   186                           
+   187                           ;main.c: 63:         {;main.c: 64:             sentido_reloj();
+   188  03BB  2374               	fcall	_sentido_reloj
+   189                           
+   190                           ;main.c: 65:         }
+   191  03BC  2BB5               	goto	l694
+   192  03BD                     l698:
+   193  03BD  0305               	decf	5,w	;volatile
+   194  03BE  1D03               	btfss	3,2
+   195  03BF  2BC1               	goto	u121
+   196  03C0  2BC2               	goto	u120
+   197  03C1                     u121:
+   198  03C1  2BC3               	goto	l702
+   199  03C2                     u120:
+   200  03C2  2BBB               	goto	l696
+   201  03C3                     l702:
+   202  03C3  3002               	movlw	2
+   203  03C4  0605               	xorwf	5,w	;volatile
+   204  03C5  1D03               	btfss	3,2
+   205  03C6  2BC8               	goto	u131
+   206  03C7  2BC9               	goto	u130
+   207  03C8                     u131:
+   208  03C8  2BCA               	goto	l706
+   209  03C9                     u130:
+   210  03C9  2BBB               	goto	l696
+   211  03CA                     l706:
+   212  03CA  3003               	movlw	3
+   213  03CB  0605               	xorwf	5,w	;volatile
+   214  03CC  1D03               	btfss	3,2
+   215  03CD  2BCF               	goto	u141
+   216  03CE  2BD0               	goto	u140
+   217  03CF                     u141:
+   218  03CF  2BD1               	goto	l710
+   219  03D0                     u140:
+   220  03D0  2BBB               	goto	l696
+   221  03D1                     l710:
+   222  03D1  3004               	movlw	4
+   223  03D2  0605               	xorwf	5,w	;volatile
+   224  03D3  1D03               	btfss	3,2
+   225  03D4  2BD6               	goto	u151
+   226  03D5  2BD7               	goto	u150
+   227  03D6                     u151:
+   228  03D6  2BD8               	goto	l714
+   229  03D7                     u150:
+   230  03D7  2BBB               	goto	l696
+   231  03D8                     l714:
+   232  03D8  3005               	movlw	5
+   233  03D9  0605               	xorwf	5,w	;volatile
+   234  03DA  1D03               	btfss	3,2
+   235  03DB  2BDD               	goto	u161
+   236  03DC  2BDE               	goto	u160
+   237  03DD                     u161:
+   238  03DD  2BDF               	goto	l718
+   239  03DE                     u160:
+   240  03DE  2BBB               	goto	l696
+   241  03DF                     l718:
+   242  03DF  3006               	movlw	6
+   243  03E0  0605               	xorwf	5,w	;volatile
+   244  03E1  1D03               	btfss	3,2
+   245  03E2  2BE4               	goto	u171
+   246  03E3  2BE5               	goto	u170
+   247  03E4                     u171:
+   248  03E4  2BE6               	goto	l722
+   249  03E5                     u170:
+   250  03E5  2BBB               	goto	l696
+   251  03E6                     l722:
+   252  03E6  3007               	movlw	7
+   253  03E7  0605               	xorwf	5,w	;volatile
+   254  03E8  1D03               	btfss	3,2
+   255  03E9  2BEB               	goto	u181
+   256  03EA  2BEC               	goto	u180
+   257  03EB                     u181:
+   258  03EB  2BED               	goto	l726
+   259  03EC                     u180:
+   260  03EC  2BBB               	goto	l696
+   261  03ED                     l726:
+   262  03ED  3008               	movlw	8
+   263  03EE  0605               	xorwf	5,w	;volatile
+   264  03EF  1D03               	btfss	3,2
+   265  03F0  2BF2               	goto	u191
+   266  03F1  2BF3               	goto	u190
+   267  03F2                     u191:
+   268  03F2  2BF4               	goto	l730
+   269  03F3                     u190:
+   270  03F3  2BBB               	goto	l696
+   271  03F4                     l730:
+   272  03F4  3009               	movlw	9
+   273  03F5  0605               	xorwf	5,w	;volatile
+   274  03F6  1D03               	btfss	3,2
+   275  03F7  2BF9               	goto	u201
+   276  03F8  2BFA               	goto	u200
+   277  03F9                     u201:
+   278  03F9  2BFB               	goto	l734
+   279  03FA                     u200:
+   280  03FA  2BBB               	goto	l696
+   281  03FB                     l734:
+   282                           
+   283                           ;main.c: 103:         {;main.c: 104:             sentido_inverso_reloj();
+   284  03FB  2337               	fcall	_sentido_inverso_reloj
+   285  03FC  2BB5               	goto	l694
+   286  03FD  2800               	ljmp	start
+   287  03FE                     __end_of_main:
+   288                           
+   289                           	psect	text1
+   290  0374                     __ptext1:	
+   291 ;; *************** function _sentido_reloj *****************
+   292 ;; Defined at:
+   293 ;;		line 15 in file "main.c"
+   294 ;; Parameters:    Size  Location     Type
+   295 ;;		None
+   296 ;; Auto vars:     Size  Location     Type
+   297 ;;		None
+   298 ;; Return value:  Size  Location     Type
+   299 ;;                  1    wreg      void 
+   300 ;; Registers used:
+   301 ;;		wreg
+   302 ;; Tracked objects:
+   303 ;;		On entry : 0/0
+   304 ;;		On exit  : 0/0
+   305 ;;		Unchanged: 0/0
+   306 ;; Data sizes:     COMMON   BANK0
+   307 ;;      Params:         0       0
+   308 ;;      Locals:         0       0
+   309 ;;      Temps:          0       1
+   310 ;;      Totals:         0       1
+   311 ;;Total ram usage:        1 bytes
+   312 ;; Hardware stack levels used: 1
+   313 ;; This function calls:
+   314 ;;		Nothing
+   315 ;; This function is called by:
+   316 ;;		_main
+   317 ;; This function uses a non-reentrant model
+   318 ;;
+   319                           
+   320  0374                     _sentido_reloj:	
+   321                           ;psect for function _sentido_reloj
+   322                           
+   323  0374                     l686:	
+   324                           ;incstack = 0
+   325                           ; Regs used in _sentido_reloj: [wreg]
+   326                           
+   327                           
+   328                           ;main.c: 17:     PORTB = 0b11111110;
+   329  0374  30FE               	movlw	254
+   330  0375  1283               	bcf	3,5	;RP0=0, select bank0
+   331  0376  0086               	movwf	6	;volatile
+   332                           
+   333                           ;main.c: 18:     _delay((unsigned long)((1)*(4000000/4000.0)));
+   334  0377  30C7               	movlw	199
+   335  0378  008C               	movwf	??_sentido_reloj
+   336  0379                     u217:
+   337  0379  2B7A               	nop2
+   338  037A  0B8C               	decfsz	??_sentido_reloj,f
+   339  037B  2B79               	goto	u217
+   340  037C  2B7D               	nop2
+   341  037D  2B7E               	nop2
+   342                           
+   343                           ;main.c: 19:     PORTB = 0b11111101;
+   344  037E  30FD               	movlw	253
+   345  037F  1283               	bcf	3,5	;RP0=0, select bank0
+   346  0380  0086               	movwf	6	;volatile
+   347                           
+   348                           ;main.c: 20:     _delay((unsigned long)((1)*(4000000/4000.0)));
+   349  0381  30C7               	movlw	199
+   350  0382  008C               	movwf	??_sentido_reloj
+   351  0383                     u227:
+   352  0383  2B84               	nop2
+   353  0384  0B8C               	decfsz	??_sentido_reloj,f
+   354  0385  2B83               	goto	u227
+   355  0386  2B87               	nop2
+   356  0387  2B88               	nop2
+   357                           
+   358                           ;main.c: 21:     PORTB = 0b11111011;
+   359  0388  30FB               	movlw	251
+   360  0389  1283               	bcf	3,5	;RP0=0, select bank0
+   361  038A  0086               	movwf	6	;volatile
+   362                           
+   363                           ;main.c: 22:     _delay((unsigned long)((1)*(4000000/4000.0)));
+   364  038B  30C7               	movlw	199
+   365  038C  008C               	movwf	??_sentido_reloj
+   366  038D                     u237:
+   367  038D  2B8E               	nop2
+   368  038E  0B8C               	decfsz	??_sentido_reloj,f
+   369  038F  2B8D               	goto	u237
+   370  0390  2B91               	nop2
+   371  0391  2B92               	nop2
+   372                           
+   373                           ;main.c: 23:     PORTB = 0b11110111;
+   374  0392  30F7               	movlw	247
+   375  0393  1283               	bcf	3,5	;RP0=0, select bank0
+   376  0394  0086               	movwf	6	;volatile
+   377                           
+   378                           ;main.c: 24:     _delay((unsigned long)((1)*(4000000/4000.0)));
+   379  0395  30C7               	movlw	199
+   380  0396  008C               	movwf	??_sentido_reloj
+   381  0397                     u247:
+   382  0397  2B98               	nop2
+   383  0398  0B8C               	decfsz	??_sentido_reloj,f
+   384  0399  2B97               	goto	u247
+   385  039A  2B9B               	nop2
+   386  039B  2B9C               	nop2
+   387                           
+   388                           ;main.c: 25:     PORTB = 0b11101111;
+   389  039C  30EF               	movlw	239
+   390  039D  1283               	bcf	3,5	;RP0=0, select bank0
+   391  039E  0086               	movwf	6	;volatile
+   392                           
+   393                           ;main.c: 26:     _delay((unsigned long)((1)*(4000000/4000.0)));
+   394  039F  30C7               	movlw	199
+   395  03A0  008C               	movwf	??_sentido_reloj
+   396  03A1                     u257:
+   397  03A1  2BA2               	nop2
+   398  03A2  0B8C               	decfsz	??_sentido_reloj,f
+   399  03A3  2BA1               	goto	u257
+   400  03A4  2BA5               	nop2
+   401  03A5  2BA6               	nop2
+   402                           
+   403                           ;main.c: 27:     PORTB = 0b11011111;
+   404  03A6  30DF               	movlw	223
+   405  03A7  1283               	bcf	3,5	;RP0=0, select bank0
+   406  03A8  0086               	movwf	6	;volatile
+   407                           
+   408                           ;main.c: 28:     _delay((unsigned long)((1)*(4000000/4000.0)));
+   409  03A9  30C7               	movlw	199
+   410  03AA  008C               	movwf	??_sentido_reloj
+   411  03AB                     u267:
+   412  03AB  2BAC               	nop2
+   413  03AC  0B8C               	decfsz	??_sentido_reloj,f
+   414  03AD  2BAB               	goto	u267
+   415  03AE  2BAF               	nop2
+   416  03AF  2BB0               	nop2
+   417  03B0                     l13:
+   418  03B0  0008               	return
+   419  03B1                     __end_of_sentido_reloj:
+   420                           
+   421                           	psect	text2
+   422  0337                     __ptext2:	
+   423 ;; *************** function _sentido_inverso_reloj *****************
+   424 ;; Defined at:
+   425 ;;		line 31 in file "main.c"
+   426 ;; Parameters:    Size  Location     Type
+   427 ;;		None
+   428 ;; Auto vars:     Size  Location     Type
+   429 ;;		None
+   430 ;; Return value:  Size  Location     Type
+   431 ;;                  1    wreg      void 
+   432 ;; Registers used:
+   433 ;;		wreg
+   434 ;; Tracked objects:
+   435 ;;		On entry : 0/0
+   436 ;;		On exit  : 0/0
+   437 ;;		Unchanged: 0/0
+   438 ;; Data sizes:     COMMON   BANK0
+   439 ;;      Params:         0       0
+   440 ;;      Locals:         0       0
+   441 ;;      Temps:          0       1
+   442 ;;      Totals:         0       1
+   443 ;;Total ram usage:        1 bytes
+   444 ;; Hardware stack levels used: 1
+   445 ;; This function calls:
+   446 ;;		Nothing
+   447 ;; This function is called by:
+   448 ;;		_main
+   449 ;; This function uses a non-reentrant model
+   450 ;;
+   451                           
+   452  0337                     _sentido_inverso_reloj:	
+   453                           ;psect for function _sentido_inverso_reloj
+   454                           
+   455  0337                     l688:	
+   456                           ;incstack = 0
+   457                           ; Regs used in _sentido_inverso_reloj: [wreg]
+   458                           
+   459                           
+   460                           ;main.c: 33:     PORTB = 0b11111110;
+   461  0337  30FE               	movlw	254
+   462  0338  1283               	bcf	3,5	;RP0=0, select bank0
+   463  0339  0086               	movwf	6	;volatile
+   464                           
+   465                           ;main.c: 34:     _delay((unsigned long)((1)*(4000000/4000.0)));
+   466  033A  30C7               	movlw	199
+   467  033B  008C               	movwf	??_sentido_inverso_reloj
+   468  033C                     u277:
+   469  033C  2B3D               	nop2
+   470  033D  0B8C               	decfsz	??_sentido_inverso_reloj,f
+   471  033E  2B3C               	goto	u277
+   472  033F  2B40               	nop2
+   473  0340  2B41               	nop2
+   474                           
+   475                           ;main.c: 35:     PORTB = 0b11011111;
+   476  0341  30DF               	movlw	223
+   477  0342  1283               	bcf	3,5	;RP0=0, select bank0
+   478  0343  0086               	movwf	6	;volatile
+   479                           
+   480                           ;main.c: 36:     _delay((unsigned long)((1)*(4000000/4000.0)));
+   481  0344  30C7               	movlw	199
+   482  0345  008C               	movwf	??_sentido_inverso_reloj
+   483  0346                     u287:
+   484  0346  2B47               	nop2
+   485  0347  0B8C               	decfsz	??_sentido_inverso_reloj,f
+   486  0348  2B46               	goto	u287
+   487  0349  2B4A               	nop2
+   488  034A  2B4B               	nop2
+   489                           
+   490                           ;main.c: 37:     PORTB = 0b11101111;
+   491  034B  30EF               	movlw	239
+   492  034C  1283               	bcf	3,5	;RP0=0, select bank0
+   493  034D  0086               	movwf	6	;volatile
+   494                           
+   495                           ;main.c: 38:     _delay((unsigned long)((1)*(4000000/4000.0)));
+   496  034E  30C7               	movlw	199
+   497  034F  008C               	movwf	??_sentido_inverso_reloj
+   498  0350                     u297:
+   499  0350  2B51               	nop2
+   500  0351  0B8C               	decfsz	??_sentido_inverso_reloj,f
+   501  0352  2B50               	goto	u297
+   502  0353  2B54               	nop2
+   503  0354  2B55               	nop2
+   504                           
+   505                           ;main.c: 39:     PORTB = 0b11110111;
+   506  0355  30F7               	movlw	247
+   507  0356  1283               	bcf	3,5	;RP0=0, select bank0
+   508  0357  0086               	movwf	6	;volatile
+   509                           
+   510                           ;main.c: 40:     _delay((unsigned long)((1)*(4000000/4000.0)));
+   511  0358  30C7               	movlw	199
+   512  0359  008C               	movwf	??_sentido_inverso_reloj
+   513  035A                     u307:
+   514  035A  2B5B               	nop2
+   515  035B  0B8C               	decfsz	??_sentido_inverso_reloj,f
+   516  035C  2B5A               	goto	u307
+   517  035D  2B5E               	nop2
+   518  035E  2B5F               	nop2
+   519                           
+   520                           ;main.c: 41:     PORTB = 0b11111011;
+   521  035F  30FB               	movlw	251
+   522  0360  1283               	bcf	3,5	;RP0=0, select bank0
+   523  0361  0086               	movwf	6	;volatile
+   524                           
+   525                           ;main.c: 42:     _delay((unsigned long)((1)*(4000000/4000.0)));
+   526  0362  30C7               	movlw	199
+   527  0363  008C               	movwf	??_sentido_inverso_reloj
+   528  0364                     u317:
+   529  0364  2B65               	nop2
+   530  0365  0B8C               	decfsz	??_sentido_inverso_reloj,f
+   531  0366  2B64               	goto	u317
+   532  0367  2B68               	nop2
+   533  0368  2B69               	nop2
+   534                           
+   535                           ;main.c: 43:     PORTB = 0b11111101;
+   536  0369  30FD               	movlw	253
+   537  036A  1283               	bcf	3,5	;RP0=0, select bank0
+   538  036B  0086               	movwf	6	;volatile
+   539                           
+   540                           ;main.c: 44:     _delay((unsigned long)((1)*(4000000/4000.0)));
+   541  036C  30C7               	movlw	199
+   542  036D  008C               	movwf	??_sentido_inverso_reloj
+   543  036E                     u327:
+   544  036E  2B6F               	nop2
+   545  036F  0B8C               	decfsz	??_sentido_inverso_reloj,f
+   546  0370  2B6E               	goto	u327
+   547  0371  2B72               	nop2
+   548  0372  2B73               	nop2
+   549  0373                     l16:
+   550  0373  0008               	return
+   551  0374                     __end_of_sentido_inverso_reloj:
+   552  004E                     btemp	set	78	;btemp
+   553  004E                     wtemp0	set	78
+   554                           
+   555                           	psect	idloc
+   556                           
+   557                           ;Config register IDLOC0 @ 0x2000
+   558                           ;	unspecified, using default values
+   559  2000                     	org	8192
+   560  2000  3FFF               	dw	16383
+   561                           
+   562                           ;Config register IDLOC1 @ 0x2001
+   563                           ;	unspecified, using default values
+   564  2001                     	org	8193
+   565  2001  3FFF               	dw	16383
+   566                           
+   567                           ;Config register IDLOC2 @ 0x2002
+   568                           ;	unspecified, using default values
+   569  2002                     	org	8194
+   570  2002  3FFF               	dw	16383
+   571                           
+   572                           ;Config register IDLOC3 @ 0x2003
+   573                           ;	unspecified, using default values
+   574  2003                     	org	8195
+   575  2003  3FFF               	dw	16383
+   576                           
+   577                           	psect	config
+   578                           
+   579                           ;Config register CONFIG @ 0x2007
+   580                           ;	Oscillator Selection bits
+   581                           ;	FOSC = EXTRC, RC oscillator
+   582                           ;	Watchdog Timer
+   583                           ;	WDTE = ON, WDT enabled
+   584                           ;	Power-up Timer Enable bit
+   585                           ;	PWRTE = OFF, Power-up Timer is disabled
+   586                           ;	Code Protection bit
+   587                           ;	CP = OFF, Code protection disabled
+   588  2007                     	org	8199
+   589  2007  3FFF               	dw	16383
+
+Data Sizes:
+    Strings     0
+    Constant    0
+    Data        0
+    BSS         0
+    Persistent  0
+    Stack       0
+
+Auto Spaces:
+    Space          Size  Autos    Used
+    COMMON            0      0       0
+    BANK0            66      1       1
+
+Pointer List with Targets:
+
+    None.
+
+Critical Paths under _main in COMMON
+
+    None.
+
+Critical Paths under _main in BANK0
+
+    _main->_sentido_inverso_reloj
+    _main->_sentido_reloj
+
+Call Graph Tables:
+
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (0) _main                                                 0     0      0       0
+              _sentido_inverso_reloj
+                      _sentido_reloj
+ ---------------------------------------------------------------------------------
+ (1) _sentido_reloj                                        1     1      0       0
+                                              0 BANK0      1     1      0
+ ---------------------------------------------------------------------------------
+ (1) _sentido_inverso_reloj                                1     1      0       0
+                                              0 BANK0      1     1      0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 1
+ ---------------------------------------------------------------------------------
+
+ Call Graph Graphs:
+
+ _main (ROOT)
+   _sentido_inverso_reloj
+   _sentido_reloj
+
+ Address spaces:
+Name               Size   Autos  Total    Cost      Usage
+BITCOMMON            0      0       0       0        0.0%
+EEDATA              40      0       0       0        0.0%
+NULL                 0      0       0       0        0.0%
+CODE                 0      0       0       0        0.0%
+BITSFR0              0      0       0       1        0.0%
+SFR0                 0      0       0       1        0.0%
+COMMON               0      0       0       1        0.0%
+BITSFR1              0      0       0       2        0.0%
+SFR1                 0      0       0       2        0.0%
+STACK                0      0       0       2        0.0%
+BANK0               42      1       1       3        1.5%
+ABS                  0      0       0       4        0.0%
+BITBANK0            42      0       0       5        0.0%
+DATA                 0      0       0       6        0.0%
+
+
+Microchip Technology PIC Macro Assembler V2.36 build 20220127204148 
+Symbol Table                                                                                   Wed Mar 23 15:48:55 2022
+
+                           l13 03B0                             l16 0373                            l710 03D1  
+                          l702 03C3                            l730 03F4                            l722 03E6  
+                          l714 03D8                            l706 03CA                            l734 03FB  
+                          l726 03ED                            l718 03DF                            l690 03B1  
+                          l692 03B4                            l686 0374                            l694 03B5  
+                          l688 0337                            l696 03BB                            l698 03BD  
+                          u110 03BB                            u111 03BA                            u200 03FA  
+                          u120 03C2                            u201 03F9                            u121 03C1  
+                          u130 03C9                            u131 03C8                            u140 03D0  
+                          u141 03CF                            u150 03D7                            u151 03D6  
+                          u160 03DE                            u217 0379                            u161 03DD  
+                          u170 03E5                            u307 035A                            u227 0383  
+                          u171 03E4                            u180 03EC                            u317 0364  
+                          u237 038D                            u181 03EB                            u190 03F3  
+                          u327 036E                            u247 0397                            u191 03F2  
+                          u257 03A1                            u267 03AB                            u277 033C  
+                          u287 0346                            u297 0350                           _main 03B1  
+                         btemp 004E                           start 0000        ??_sentido_inverso_reloj 000C  
+                        ?_main 000C                          _PORTA 0005                          _PORTB 0006  
+                        _TRISA 0085                          _TRISB 0086                          status 0003  
+                        wtemp0 004E                __initialization 03FE                   __end_of_main 03FE  
+                       ??_main 0000        __end_of__initialization 03FE                 __pcstackCOMMON 0000  
+        __end_of_sentido_reloj 03B1                     __pmaintext 03B1  __end_of_sentido_inverso_reloj 0374  
+                      __ptext1 0374                        __ptext2 0337           end_of_initialization 03FE  
+          start_initialization 03FE                      ___latbits 0000                  __pcstackBANK0 000C  
+        _sentido_inverso_reloj 0337                  _sentido_reloj 0374         ?_sentido_inverso_reloj 000C  
+               ?_sentido_reloj 000C                ??_sentido_reloj 000C  

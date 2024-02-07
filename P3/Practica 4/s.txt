@@ -1,0 +1,79 @@
+Lcd_Out(1,1,"Hola Equipo 5");
+        Lcd_Out(2,1,"*****IPN*****");
+         
+         __delay_ms(1000);
+         
+         Lcd_Out(1,1," Hola Equipo ");
+         Lcd_Out(2,1,"*****IPN*****");
+         
+         __delay_ms(1000);
+         
+        Lcd_Out(1,1,"  Hola Equipo");
+        Lcd_Out(2,1,"*****IPN*****");
+         
+         __delay_ms(1000);
+         
+        Lcd_Out(1,1,"   Hola Equip"); //3
+        Lcd_Out(2,1,"*****IPN*****");
+         
+         __delay_ms(1000);
+         
+        Lcd_Out(1,1,"    Hola Equi"); //4
+        Lcd_Out(2,1,"*****IPN*****");
+         
+         __delay_ms(1000);
+         
+        Lcd_Out(1,1,"     Hola Equ"); //5
+        Lcd_Out(2,1,"*****IPN*****");
+         
+         __delay_ms(1000);
+         
+        Lcd_Out(1,1,"      Hola Eq"); //6
+        Lcd_Out(2,1,"*****IPN*****");
+         
+         __delay_ms(1000);
+         
+        Lcd_Out(1,1,"       Hola E"); //7
+        Lcd_Out(2,1,"*****IPN*****");
+         
+         __delay_ms(1000);
+         
+        Lcd_Out(1,1,"        Hola "); //8
+        Lcd_Out(2,1,"*****IPN*****");
+         
+         __delay_ms(1000);
+         
+        Lcd_Out(1,1,"          Hola"); //9
+        Lcd_Out(2,1,"*****IPN*****");
+         
+         __delay_ms(1000);
+         
+        Lcd_Out(1,1,"          Hol");//10
+        Lcd_Out(2,1,"*****IPN*****");
+         
+         __delay_ms(1000);
+         
+        Lcd_Out(1,1,"           Ho"); //11
+        Lcd_Out(2,1,"*****IPN*****");
+         
+         __delay_ms(1000);
+         
+        Lcd_Out(1,1,"            H"); //12
+        Lcd_Out(2,1,"*****IPN*****");
+         
+         __delay_ms(1000);
+         
+        Lcd_Out(1,1,"             "); //13
+        Lcd_Out(2,1,"*****IPN*****");
+         
+         __delay_ms(1000);
+         
+         Lcd_Out(1,1,"             "); //13
+        Lcd_Out(2,1,"*****IPN*****");
+         
+         __delay_ms(1000);
+         
+        Lcd_Out(1,1,"             "); //13
+        Lcd_Out(2,1,"*****IPN*****");
+         
+         __delay_ms(1000);

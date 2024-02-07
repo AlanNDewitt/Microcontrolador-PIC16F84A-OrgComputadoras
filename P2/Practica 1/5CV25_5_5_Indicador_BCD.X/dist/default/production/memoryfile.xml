@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+  <executable name="dist/default/production\5CV25_5_5_Indicador_BCD.X.production.hex">
+    <memory name="program">
+      <units>words</units>
+      <length>1024</length>
+      <used>202</used>
+      <free>822</free>
+    </memory>
+    <memory name="data">
+      <units>bytes</units>
+      <length>68</length>
+      <used>3</used>
+      <free>65</free>
+    </memory>
+  </executable>
+</project>

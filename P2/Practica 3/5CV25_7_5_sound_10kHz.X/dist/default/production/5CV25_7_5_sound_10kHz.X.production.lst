@@ -1,0 +1,407 @@
+
+
+Microchip MPLAB XC8 Assembler V2.36 build 20220127204148 
+                                                                                               Wed Apr 06 19:01:06 2022
+
+Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1 
+     1                           	processor	16F84A
+     2                           	pagewidth 120
+     3                           	opt	flic
+     4                           	psect	cinit,global,class=CODE,merge=1,delta=2
+     5                           	psect	cstackCOMMON,global,class=COMMON,space=1,delta=1,noexec
+     6                           	psect	cstackBANK0,global,class=BANK0,space=1,delta=1,noexec
+     7                           	psect	maintext,global,class=CODE,split=1,delta=2
+     8                           	psect	text1,local,class=CODE,merge=1,delta=2
+     9                           	psect	idloc,global,abs,ovrld,class=IDLOC,space=5,delta=2,noexec
+    10                           	psect	config,global,abs,ovrld,class=CONFIG,space=4,delta=2,noexec
+    11                           	dabs	1,0x4E,2
+    12  0000                     
+    13                           ; Version 2.40
+    14                           ; Generated 17/11/2021 GMT
+    15                           ; 
+    16                           ; Copyright © 2021, Microchip Technology Inc. and its subsidiaries ("Microchip")
+    17                           ; All rights reserved.
+    18                           ; 
+    19                           ; This software is developed by Microchip Technology Inc. and its subsidiaries ("Microch
+      +                          ip").
+    20                           ; 
+    21                           ; Redistribution and use in source and binary forms, with or without modification, are
+    22                           ; permitted provided that the following conditions are met:
+    23                           ; 
+    24                           ;     1. Redistributions of source code must retain the above copyright notice, this lis
+      +                          t of
+    25                           ;        conditions and the following disclaimer.
+    26                           ; 
+    27                           ;     2. Redistributions in binary form must reproduce the above copyright notice, this 
+      +                          list
+    28                           ;        of conditions and the following disclaimer in the documentation and/or other
+    29                           ;        materials provided with the distribution. Publication is not required when
+    30                           ;        this file is used in an embedded application.
+    31                           ; 
+    32                           ;     3. Microchip's name may not be used to endorse or promote products derived from th
+      +                          is
+    33                           ;        software without specific prior written permission.
+    34                           ; 
+    35                           ; THIS SOFTWARE IS PROVIDED BY MICROCHIP "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+    36                           ; INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS F
+      +                          OR
+    37                           ; PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL MICROCHIP BE LIABLE FOR ANY DIRECT, INDIREC
+      +                          T,
+    38                           ; INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING BUT NOT LIMITED TO
+    39                           ; PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA OR PROFITS; OR BUSINESS
+    40                           ; INTERRUPTION) HOWSOEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, ST
+      +                          RICT
+    41                           ; LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE U
+      +                          SE OF
+    42                           ; THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+    43                           ; 
+    44                           ; 
+    45                           ; Code-generator required, PIC16F84A Definitions
+    46                           ; 
+    47                           ; SFR Addresses
+    48  0000                     	;# 
+    49  0001                     	;# 
+    50  0002                     	;# 
+    51  0003                     	;# 
+    52  0004                     	;# 
+    53  0005                     	;# 
+    54  0006                     	;# 
+    55  0008                     	;# 
+    56  0009                     	;# 
+    57  000A                     	;# 
+    58  000B                     	;# 
+    59  0081                     	;# 
+    60  0085                     	;# 
+    61  0086                     	;# 
+    62  0088                     	;# 
+    63  0089                     	;# 
+    64  0000                     	;# 
+    65  0001                     	;# 
+    66  0002                     	;# 
+    67  0003                     	;# 
+    68  0004                     	;# 
+    69  0005                     	;# 
+    70  0006                     	;# 
+    71  0008                     	;# 
+    72  0009                     	;# 
+    73  000A                     	;# 
+    74  000B                     	;# 
+    75  0081                     	;# 
+    76  0085                     	;# 
+    77  0086                     	;# 
+    78  0088                     	;# 
+    79  0089                     	;# 
+    80  0006                     _PORTB	set	6
+    81  0086                     _TRISB	set	134
+    82  0085                     _TRISA	set	133
+    83                           
+    84                           	psect	cinit
+    85  03FE                     start_initialization:	
+    86                           ; #config settings
+    87                           
+    88  03FE                     __initialization:
+    89  03FE                     end_of_initialization:	
+    90                           ;End of C runtime variable initialization code
+    91                           
+    92  03FE                     __end_of__initialization:
+    93  03FE  0183               	clrf	3
+    94  03FF  2BD2               	ljmp	_main	;jump to C main() function
+    95                           
+    96                           	psect	cstackCOMMON
+    97  0000                     __pcstackCOMMON:
+    98  0000                     ??_main:
+    99                           
+   100                           	psect	cstackBANK0
+   101  000C                     __pcstackBANK0:	
+   102                           ; 1 bytes @ 0x0
+   103                           
+   104  000C                     ?_diez:
+   105  000C                     ??_diez:	
+   106                           ; 1 bytes @ 0x0
+   107                           
+   108  000C                     ?_main:	
+   109                           ; 1 bytes @ 0x0
+   110                           
+   111                           
+   112                           ; 1 bytes @ 0x0
+   113  000C                     	ds	1
+   114  000D                     diez@i:
+   115                           
+   116                           ; 2 bytes @ 0x1
+   117  000D                     	ds	2
+   118                           
+   119                           	psect	maintext
+   120  03D2                     __pmaintext:	
+   121 ;;
+   122 ;;Main: autosize = 0, tempsize = 0, incstack = 0, save=0
+   123 ;;
+   124 ;; *************** function _main *****************
+   125 ;; Defined at:
+   126 ;;		line 38 in file "main.c"
+   127 ;; Parameters:    Size  Location     Type
+   128 ;;		None
+   129 ;; Auto vars:     Size  Location     Type
+   130 ;;		None
+   131 ;; Return value:  Size  Location     Type
+   132 ;;                  1    wreg      void 
+   133 ;; Registers used:
+   134 ;;		wreg, status,2, status,0, btemp+1, pclath, cstack
+   135 ;; Tracked objects:
+   136 ;;		On entry : B00/0
+   137 ;;		On exit  : 0/0
+   138 ;;		Unchanged: 0/0
+   139 ;; Data sizes:     COMMON   BANK0
+   140 ;;      Params:         0       0
+   141 ;;      Locals:         0       0
+   142 ;;      Temps:          0       0
+   143 ;;      Totals:         0       0
+   144 ;;Total ram usage:        0 bytes
+   145 ;; Hardware stack levels required when called: 1
+   146 ;; This function calls:
+   147 ;;		_diez
+   148 ;; This function is called by:
+   149 ;;		Startup code after reset
+   150 ;; This function uses a non-reentrant model
+   151 ;;
+   152                           
+   153  03D2                     _main:	
+   154                           ;psect for function _main
+   155                           
+   156  03D2                     l672:	
+   157                           ;incstack = 0
+   158                           ; Regs used in _main: [wreg+status,2+status,0+btemp+1+pclath+cstack]
+   159                           
+   160                           
+   161                           ;main.c: 43:     TRISA = 1;
+   162  03D2  3001               	movlw	1
+   163  03D3  1683               	bsf	3,5	;RP0=1, select bank1
+   164  03D4  0085               	movwf	5	;volatile
+   165  03D5                     l674:
+   166                           
+   167                           ;main.c: 44:     TRISB = 0;
+   168  03D5  0186               	clrf	6	;volatile
+   169  03D6                     l676:
+   170                           
+   171                           ;main.c: 55:     {;main.c: 57:         diez();
+   172  03D6  23D9               	fcall	_diez
+   173  03D7  2BD6               	goto	l676
+   174  03D8  2800               	ljmp	start
+   175  03D9                     __end_of_main:
+   176                           
+   177                           	psect	text1
+   178  03D9                     __ptext1:	
+   179 ;; *************** function _diez *****************
+   180 ;; Defined at:
+   181 ;;		line 15 in file "main.c"
+   182 ;; Parameters:    Size  Location     Type
+   183 ;;		None
+   184 ;; Auto vars:     Size  Location     Type
+   185 ;;  i               2    1[BANK0 ] int 
+   186 ;; Return value:  Size  Location     Type
+   187 ;;                  1    wreg      void 
+   188 ;; Registers used:
+   189 ;;		wreg, status,2, btemp+1
+   190 ;; Tracked objects:
+   191 ;;		On entry : 0/0
+   192 ;;		On exit  : 0/0
+   193 ;;		Unchanged: 0/0
+   194 ;; Data sizes:     COMMON   BANK0
+   195 ;;      Params:         0       0
+   196 ;;      Locals:         0       2
+   197 ;;      Temps:          0       1
+   198 ;;      Totals:         0       3
+   199 ;;Total ram usage:        3 bytes
+   200 ;; Hardware stack levels used: 1
+   201 ;; This function calls:
+   202 ;;		Nothing
+   203 ;; This function is called by:
+   204 ;;		_main
+   205 ;; This function uses a non-reentrant model
+   206 ;;
+   207                           
+   208  03D9                     _diez:	
+   209                           ;psect for function _diez
+   210                           
+   211  03D9                     l656:	
+   212                           ;incstack = 0
+   213                           ; Regs used in _diez: [wreg+status,2+btemp+1]
+   214                           
+   215                           
+   216                           ;main.c: 17:     for (int i = 0 ; i < 10000; i++)
+   217  03D9  1283               	bcf	3,5	;RP0=0, select bank0
+   218  03DA  018D               	clrf	diez@i
+   219  03DB  018E               	clrf	diez@i+1
+   220  03DC                     l662:
+   221                           
+   222                           ;main.c: 18:          {;main.c: 19:             PORTB = 0b00000111;
+   223  03DC  3007               	movlw	7
+   224  03DD  1283               	bcf	3,5	;RP0=0, select bank0
+   225  03DE  0086               	movwf	6	;volatile
+   226                           
+   227                           ;main.c: 20:             _delay((unsigned long)((37)*(4000000/4000000.0)));
+   228  03DF  300C               	movlw	12
+   229  03E0  008C               	movwf	??_diez
+   230  03E1                     u47:
+   231  03E1  0B8C               	decfsz	??_diez,f
+   232  03E2  2BE1               	goto	u47
+   233  03E3                     l664:
+   234                           
+   235                           ;main.c: 21:             PORTB = 0b00000000;
+   236  03E3  1283               	bcf	3,5	;RP0=0, select bank0
+   237  03E4  0186               	clrf	6	;volatile
+   238  03E5                     l666:
+   239                           
+   240                           ;main.c: 22:             _delay((unsigned long)((37)*(4000000/4000000.0)));
+   241  03E5  300C               	movlw	12
+   242  03E6  008C               	movwf	??_diez
+   243  03E7                     u57:
+   244  03E7  0B8C               	decfsz	??_diez,f
+   245  03E8  2BE7               	goto	u57
+   246  03E9                     l668:
+   247                           
+   248                           ;main.c: 23:          }
+   249  03E9  3001               	movlw	1
+   250  03EA  1283               	bcf	3,5	;RP0=0, select bank0
+   251  03EB  078D               	addwf	diez@i,f
+   252  03EC  1803               	skipnc
+   253  03ED  0A8E               	incf	diez@i+1,f
+   254  03EE  3000               	movlw	0
+   255  03EF  078E               	addwf	diez@i+1,f
+   256  03F0                     l670:
+   257  03F0  080E               	movf	diez@i+1,w
+   258  03F1  3A80               	xorlw	128
+   259  03F2  00CF               	movwf	btemp+1
+   260  03F3  30A7               	movlw	167
+   261  03F4  024F               	subwf	btemp+1,w
+   262  03F5  1D03               	skipz
+   263  03F6  2BF9               	goto	u35
+   264  03F7  3010               	movlw	16
+   265  03F8  020D               	subwf	diez@i,w
+   266  03F9                     u35:
+   267  03F9  1C03               	skipc
+   268  03FA  2BFC               	goto	u31
+   269  03FB  2BFD               	goto	u30
+   270  03FC                     u31:
+   271  03FC  2BDC               	goto	l662
+   272  03FD                     u30:
+   273  03FD                     l13:
+   274  03FD  0008               	return
+   275  03FE                     __end_of_diez:
+   276  004E                     btemp	set	78	;btemp
+   277  004E                     wtemp0	set	78
+   278                           
+   279                           	psect	idloc
+   280                           
+   281                           ;Config register IDLOC0 @ 0x2000
+   282                           ;	unspecified, using default values
+   283  2000                     	org	8192
+   284  2000  3FFF               	dw	16383
+   285                           
+   286                           ;Config register IDLOC1 @ 0x2001
+   287                           ;	unspecified, using default values
+   288  2001                     	org	8193
+   289  2001  3FFF               	dw	16383
+   290                           
+   291                           ;Config register IDLOC2 @ 0x2002
+   292                           ;	unspecified, using default values
+   293  2002                     	org	8194
+   294  2002  3FFF               	dw	16383
+   295                           
+   296                           ;Config register IDLOC3 @ 0x2003
+   297                           ;	unspecified, using default values
+   298  2003                     	org	8195
+   299  2003  3FFF               	dw	16383
+   300                           
+   301                           	psect	config
+   302                           
+   303                           ;Config register CONFIG @ 0x2007
+   304                           ;	Oscillator Selection bits
+   305                           ;	FOSC = EXTRC, RC oscillator
+   306                           ;	Watchdog Timer
+   307                           ;	WDTE = ON, WDT enabled
+   308                           ;	Power-up Timer Enable bit
+   309                           ;	PWRTE = OFF, Power-up Timer is disabled
+   310                           ;	Code Protection bit
+   311                           ;	CP = OFF, Code protection disabled
+   312  2007                     	org	8199
+   313  2007  3FFF               	dw	16383
+
+Data Sizes:
+    Strings     0
+    Constant    0
+    Data        0
+    BSS         0
+    Persistent  0
+    Stack       0
+
+Auto Spaces:
+    Space          Size  Autos    Used
+    COMMON            0      0       0
+    BANK0            66      3       3
+
+Pointer List with Targets:
+
+    None.
+
+Critical Paths under _main in COMMON
+
+    None.
+
+Critical Paths under _main in BANK0
+
+    _main->_diez
+
+Call Graph Tables:
+
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (0) _main                                                 0     0      0      46
+                               _diez
+ ---------------------------------------------------------------------------------
+ (1) _diez                                                 3     3      0      46
+                                              0 BANK0      3     3      0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 1
+ ---------------------------------------------------------------------------------
+
+ Call Graph Graphs:
+
+ _main (ROOT)
+   _diez
+
+ Address spaces:
+Name               Size   Autos  Total    Cost      Usage
+BITCOMMON            0      0       0       0        0.0%
+EEDATA              40      0       0       0        0.0%
+NULL                 0      0       0       0        0.0%
+CODE                 0      0       0       0        0.0%
+BITSFR0              0      0       0       1        0.0%
+SFR0                 0      0       0       1        0.0%
+COMMON               0      0       0       1        0.0%
+BITSFR1              0      0       0       2        0.0%
+SFR1                 0      0       0       2        0.0%
+STACK                0      0       0       2        0.0%
+BANK0               42      3       3       3        4.5%
+ABS                  0      0       0       4        0.0%
+BITBANK0            42      0       0       5        0.0%
+DATA                 0      0       0       6        0.0%
+
+
+Microchip Technology PIC Macro Assembler V2.36 build 20220127204148 
+Symbol Table                                                                                   Wed Apr 06 19:01:06 2022
+
+                     l13 03FD                       u30 03FD                       u31 03FC  
+                     u35 03F9                       u47 03E1                       u57 03E7  
+                    l670 03F0                      l662 03DC                      l664 03E3  
+                    l656 03D9                      l672 03D2                      l666 03E5  
+                    l674 03D5                      l668 03E9                      l676 03D6  
+                   _diez 03D9                     _main 03D2                     btemp 004E  
+                   start 0000                    ?_diez 000C                    ?_main 000C  
+                  _PORTB 0006                    _TRISA 0085                    _TRISB 0086  
+                  diez@i 000D                    status 0003                    wtemp0 004E  
+        __initialization 03FE             __end_of_diez 03FE             __end_of_main 03D9  
+                 ??_diez 000C                   ??_main 0000  __end_of__initialization 03FE  
+         __pcstackCOMMON 0000               __pmaintext 03D2                  __ptext1 03D9  
+   end_of_initialization 03FE      start_initialization 03FE                ___latbits 0000  
+          __pcstackBANK0 000C  

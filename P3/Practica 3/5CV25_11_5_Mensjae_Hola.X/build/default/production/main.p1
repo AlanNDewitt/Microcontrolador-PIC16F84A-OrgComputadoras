@@ -1,0 +1,594 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"505 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f84a.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f84a.h: 505:     struct {
+[s S20 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S20 . TRISB0 TRISB1 TRISB2 TRISB3 TRISB4 TRISB5 TRISB6 TRISB7 ]
+"504
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f84a.h: 504: typedef union {
+[u S19 `S20 1 ]
+[n S19 . . ]
+"516
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f84a.h: 516: extern volatile TRISBbits_t TRISBbits __attribute__((address(0x086)));
+[v _TRISBbits `VS19 ~T0 @X0 0 e@134 ]
+"217
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f84a.h: 217:     struct {
+[s S8 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S8 . RB0 RB1 RB2 RB3 RB4 RB5 RB6 RB7 ]
+"216
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f84a.h: 216: typedef union {
+[u S7 `S8 1 ]
+[n S7 . . ]
+"228
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f84a.h: 228: extern volatile PORTBbits_t PORTBbits __attribute__((address(0x006)));
+[v _PORTBbits `VS7 ~T0 @X0 0 e@6 ]
+[v F36 `(v ~T0 @X0 1 tf1`ul ]
+"12 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\builtins.h
+[v __delay `JF36 ~T0 @X0 0 e ]
+[p i __delay ]
+"50 ./flex-lcd.h
+[; ;./flex-lcd.h: 50: void Lcd_Cmd(unsigned char data);
+[v _Lcd_Cmd `(v ~T0 @X0 0 ef1`uc ]
+"49
+[; ;./flex-lcd.h: 49: void Lcd_Chr_CP(char data);
+[v _Lcd_Chr_CP `(v ~T0 @X0 0 ef1`uc ]
+[p mainexit ]
+"499 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f84a.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f84a.h: 499: extern volatile unsigned char TRISB __attribute__((address(0x086)));
+[v _TRISB `Vuc ~T0 @X0 0 e@134 ]
+"2 main.c
+[; ;main.c: 2: 
+[p x FOSC  =  EXTRC      ]
+"3
+[; ;main.c: 3: 
+[p x WDTE  =  ON         ]
+"4
+[; ;main.c: 4: 
+[p x PWRTE  =  OFF       ]
+"5
+[; ;main.c: 5: 
+[p x CP  =  OFF          ]
+"55 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f84a.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f84a.h: 55: __asm("INDF equ 00h");
+[; <" INDF equ 00h ;# ">
+"62
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f84a.h: 62: __asm("TMR0 equ 01h");
+[; <" TMR0 equ 01h ;# ">
+"69
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f84a.h: 69: __asm("PCL equ 02h");
+[; <" PCL equ 02h ;# ">
+"76
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f84a.h: 76: __asm("STATUS equ 03h");
+[; <" STATUS equ 03h ;# ">
+"162
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f84a.h: 162: __asm("FSR equ 04h");
+[; <" FSR equ 04h ;# ">
+"169
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f84a.h: 169: __asm("PORTA equ 05h");
+[; <" PORTA equ 05h ;# ">
+"213
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f84a.h: 213: __asm("PORTB equ 06h");
+[; <" PORTB equ 06h ;# ">
+"275
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f84a.h: 275: __asm("EEDATA equ 08h");
+[; <" EEDATA equ 08h ;# ">
+"282
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f84a.h: 282: __asm("EEADR equ 09h");
+[; <" EEADR equ 09h ;# ">
+"289
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f84a.h: 289: __asm("PCLATH equ 0Ah");
+[; <" PCLATH equ 0Ah ;# ">
+"309
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f84a.h: 309: __asm("INTCON equ 0Bh");
+[; <" INTCON equ 0Bh ;# ">
+"387
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f84a.h: 387: __asm("OPTION_REG equ 081h");
+[; <" OPTION_REG equ 081h ;# ">
+"457
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f84a.h: 457: __asm("TRISA equ 085h");
+[; <" TRISA equ 085h ;# ">
+"501
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f84a.h: 501: __asm("TRISB equ 086h");
+[; <" TRISB equ 086h ;# ">
+"563
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f84a.h: 563: __asm("EECON1 equ 088h");
+[; <" EECON1 equ 088h ;# ">
+"607
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f84a.h: 607: __asm("EECON2 equ 089h");
+[; <" EECON2 equ 089h ;# ">
+"52 ./flex-lcd.h
+[; ;./flex-lcd.h: 52: void Lcd_Init(void){
+[v _Lcd_Init `(v ~T0 @X0 1 ef ]
+{
+[e :U _Lcd_Init ]
+[f ]
+"53
+[; ;./flex-lcd.h: 53: unsigned char data;
+[v _data `uc ~T0 @X0 1 a ]
+"54
+[; ;./flex-lcd.h: 54: TRISBbits.TRISB4 = 0;
+[e = . . _TRISBbits 0 4 -> -> 0 `i `uc ]
+"55
+[; ;./flex-lcd.h: 55: TRISBbits.TRISB3 = 0;
+[e = . . _TRISBbits 0 3 -> -> 0 `i `uc ]
+"56
+[; ;./flex-lcd.h: 56: TRISBbits.TRISB2 = 0;
+[e = . . _TRISBbits 0 2 -> -> 0 `i `uc ]
+"57
+[; ;./flex-lcd.h: 57: TRISBbits.TRISB1 = 0;
+[e = . . _TRISBbits 0 1 -> -> 0 `i `uc ]
+"58
+[; ;./flex-lcd.h: 58: TRISBbits.TRISB7 = 0;
+[e = . . _TRISBbits 0 7 -> -> 0 `i `uc ]
+"59
+[; ;./flex-lcd.h: 59: TRISBbits.TRISB0 = 0;
+[e = . . _TRISBbits 0 0 -> -> 0 `i `uc ]
+"60
+[; ;./flex-lcd.h: 60: PORTBbits.RB4 = 0;
+[e = . . _PORTBbits 0 4 -> -> 0 `i `uc ]
+"61
+[; ;./flex-lcd.h: 61: PORTBbits.RB3 = 0;
+[e = . . _PORTBbits 0 3 -> -> 0 `i `uc ]
+"62
+[; ;./flex-lcd.h: 62: PORTBbits.RB2 = 0;
+[e = . . _PORTBbits 0 2 -> -> 0 `i `uc ]
+"63
+[; ;./flex-lcd.h: 63: PORTBbits.RB1 = 0;
+[e = . . _PORTBbits 0 1 -> -> 0 `i `uc ]
+"64
+[; ;./flex-lcd.h: 64: PORTBbits.RB7 = 0;
+[e = . . _PORTBbits 0 7 -> -> 0 `i `uc ]
+"65
+[; ;./flex-lcd.h: 65: PORTBbits.RB0 = 0;
+[e = . . _PORTBbits 0 0 -> -> 0 `i `uc ]
+"66
+[; ;./flex-lcd.h: 66: _delay((unsigned long)((5500)*(4000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 5500 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+"67
+[; ;./flex-lcd.h: 67: _delay((unsigned long)((5500)*(4000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 5500 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+"68
+[; ;./flex-lcd.h: 68: _delay((unsigned long)((5500)*(4000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 5500 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+"69
+[; ;./flex-lcd.h: 69: _delay((unsigned long)((5500)*(4000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 5500 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+"70
+[; ;./flex-lcd.h: 70: _delay((unsigned long)((5500)*(4000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 5500 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+"71
+[; ;./flex-lcd.h: 71: _delay((unsigned long)((5500)*(4000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 5500 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+"72
+[; ;./flex-lcd.h: 72: for(data = 1; data < 4; data ++)
+{
+[e = _data -> -> 1 `i `uc ]
+[e $ < -> _data `i -> 4 `i 24  ]
+[e $U 25  ]
+[e :U 24 ]
+"73
+[; ;./flex-lcd.h: 73: {
+{
+"74
+[; ;./flex-lcd.h: 74:     PORTBbits.RB4 = 0; PORTBbits.RB3 = 0; PORTBbits.RB2 = 1; PORTBbits.RB1 = 1; PORTBbits.RB7 = 0;
+[e = . . _PORTBbits 0 4 -> -> 0 `i `uc ]
+[e = . . _PORTBbits 0 3 -> -> 0 `i `uc ]
+[e = . . _PORTBbits 0 2 -> -> 1 `i `uc ]
+[e = . . _PORTBbits 0 1 -> -> 1 `i `uc ]
+[e = . . _PORTBbits 0 7 -> -> 0 `i `uc ]
+"75
+[; ;./flex-lcd.h: 75:     PORTBbits.RB0 = 0; PORTBbits.RB4 = 0; PORTBbits.RB3 = 0; PORTBbits.RB2 = 1; PORTBbits.RB1 = 1;
+[e = . . _PORTBbits 0 0 -> -> 0 `i `uc ]
+[e = . . _PORTBbits 0 4 -> -> 0 `i `uc ]
+[e = . . _PORTBbits 0 3 -> -> 0 `i `uc ]
+[e = . . _PORTBbits 0 2 -> -> 1 `i `uc ]
+[e = . . _PORTBbits 0 1 -> -> 1 `i `uc ]
+"76
+[; ;./flex-lcd.h: 76:     PORTBbits.RB7 = 1; PORTBbits.RB0 = 0;
+[e = . . _PORTBbits 0 7 -> -> 1 `i `uc ]
+[e = . . _PORTBbits 0 0 -> -> 0 `i `uc ]
+"77
+[; ;./flex-lcd.h: 77:     _delay((unsigned long)((5)*(4000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+"78
+[; ;./flex-lcd.h: 78:     PORTBbits.RB4 = 0; PORTBbits.RB3 = 0; PORTBbits.RB2 = 1; PORTBbits.RB1 = 1; PORTBbits.RB7 = 0;
+[e = . . _PORTBbits 0 4 -> -> 0 `i `uc ]
+[e = . . _PORTBbits 0 3 -> -> 0 `i `uc ]
+[e = . . _PORTBbits 0 2 -> -> 1 `i `uc ]
+[e = . . _PORTBbits 0 1 -> -> 1 `i `uc ]
+[e = . . _PORTBbits 0 7 -> -> 0 `i `uc ]
+"79
+[; ;./flex-lcd.h: 79:     PORTBbits.RB0 = 0;
+[e = . . _PORTBbits 0 0 -> -> 0 `i `uc ]
+"80
+[; ;./flex-lcd.h: 80:     _delay((unsigned long)((5500)*(4000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 5500 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+"81
+[; ;./flex-lcd.h: 81: }
+}
+[e ++ _data -> -> 1 `i `uc ]
+[e $ < -> _data `i -> 4 `i 24  ]
+[e :U 25 ]
+}
+"82
+[; ;./flex-lcd.h: 82: PORTBbits.RB4 = 0; PORTBbits.RB3 = 0; PORTBbits.RB2 = 1; PORTBbits.RB1 = 0; PORTBbits.RB7 = 0; PORTBbits.RB0 = 0;
+[e = . . _PORTBbits 0 4 -> -> 0 `i `uc ]
+[e = . . _PORTBbits 0 3 -> -> 0 `i `uc ]
+[e = . . _PORTBbits 0 2 -> -> 1 `i `uc ]
+[e = . . _PORTBbits 0 1 -> -> 0 `i `uc ]
+[e = . . _PORTBbits 0 7 -> -> 0 `i `uc ]
+[e = . . _PORTBbits 0 0 -> -> 0 `i `uc ]
+"83
+[; ;./flex-lcd.h: 83: PORTBbits.RB4 = 0; PORTBbits.RB3 = 0; PORTBbits.RB2 = 1; PORTBbits.RB1 = 0; PORTBbits.RB7 = 1; PORTBbits.RB0 = 0;
+[e = . . _PORTBbits 0 4 -> -> 0 `i `uc ]
+[e = . . _PORTBbits 0 3 -> -> 0 `i `uc ]
+[e = . . _PORTBbits 0 2 -> -> 1 `i `uc ]
+[e = . . _PORTBbits 0 1 -> -> 0 `i `uc ]
+[e = . . _PORTBbits 0 7 -> -> 1 `i `uc ]
+[e = . . _PORTBbits 0 0 -> -> 0 `i `uc ]
+"84
+[; ;./flex-lcd.h: 84: _delay((unsigned long)((5)*(4000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+"85
+[; ;./flex-lcd.h: 85: PORTBbits.RB4 = 0; PORTBbits.RB3 = 0; PORTBbits.RB2 = 1; PORTBbits.RB1 = 0; PORTBbits.RB7 = 0; PORTBbits.RB0 = 0;
+[e = . . _PORTBbits 0 4 -> -> 0 `i `uc ]
+[e = . . _PORTBbits 0 3 -> -> 0 `i `uc ]
+[e = . . _PORTBbits 0 2 -> -> 1 `i `uc ]
+[e = . . _PORTBbits 0 1 -> -> 0 `i `uc ]
+[e = . . _PORTBbits 0 7 -> -> 0 `i `uc ]
+[e = . . _PORTBbits 0 0 -> -> 0 `i `uc ]
+"86
+[; ;./flex-lcd.h: 86: _delay((unsigned long)((5500)*(4000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 5500 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+"87
+[; ;./flex-lcd.h: 87: data = 40; Lcd_Cmd(data);
+[e = _data -> -> 40 `i `uc ]
+[e ( _Lcd_Cmd (1 _data ]
+"88
+[; ;./flex-lcd.h: 88: data = 16; Lcd_Cmd(data);
+[e = _data -> -> 16 `i `uc ]
+[e ( _Lcd_Cmd (1 _data ]
+"89
+[; ;./flex-lcd.h: 89: data = 1; Lcd_Cmd(data);
+[e = _data -> -> 1 `i `uc ]
+[e ( _Lcd_Cmd (1 _data ]
+"90
+[; ;./flex-lcd.h: 90: data = 15; Lcd_Cmd(data);
+[e = _data -> -> 15 `i `uc ]
+[e ( _Lcd_Cmd (1 _data ]
+"91
+[; ;./flex-lcd.h: 91: }
+[e :UE 23 ]
+}
+"94
+[; ;./flex-lcd.h: 94: void Lcd_Out(unsigned char y, unsigned char x, const char *buffer)
+[v _Lcd_Out `(v ~T0 @X0 1 ef3`uc`uc`*Cuc ]
+"95
+[; ;./flex-lcd.h: 95: {
+{
+[e :U _Lcd_Out ]
+"94
+[; ;./flex-lcd.h: 94: void Lcd_Out(unsigned char y, unsigned char x, const char *buffer)
+[v _y `uc ~T0 @X0 1 r1 ]
+[v _x `uc ~T0 @X0 1 r2 ]
+[v _buffer `*Cuc ~T0 @X0 1 r3 ]
+"95
+[; ;./flex-lcd.h: 95: {
+[f ]
+"96
+[; ;./flex-lcd.h: 96: unsigned char data;
+[v _data `uc ~T0 @X0 1 a ]
+"97
+[; ;./flex-lcd.h: 97: switch (y)
+[e $U 29  ]
+"98
+[; ;./flex-lcd.h: 98: {
+{
+"99
+[; ;./flex-lcd.h: 99:     case 1: data = 128 + x; break;
+[e :U 30 ]
+[e = _data -> + -> 128 `i -> _x `i `uc ]
+[e $U 28  ]
+"100
+[; ;./flex-lcd.h: 100:     case 2: data = 192 + x; break;
+[e :U 31 ]
+[e = _data -> + -> 192 `i -> _x `i `uc ]
+[e $U 28  ]
+"101
+[; ;./flex-lcd.h: 101:     case 3: data = 148 + x; break;
+[e :U 32 ]
+[e = _data -> + -> 148 `i -> _x `i `uc ]
+[e $U 28  ]
+"102
+[; ;./flex-lcd.h: 102:     case 4: data = 212 + x; break;
+[e :U 33 ]
+[e = _data -> + -> 212 `i -> _x `i `uc ]
+[e $U 28  ]
+"103
+[; ;./flex-lcd.h: 103:     default: break;
+[e :U 34 ]
+[e $U 28  ]
+"104
+[; ;./flex-lcd.h: 104: }
+}
+[e $U 28  ]
+[e :U 29 ]
+[e [\ -> _y `i , $ -> 1 `i 30
+ , $ -> 2 `i 31
+ , $ -> 3 `i 32
+ , $ -> 4 `i 33
+ 34 ]
+[e :U 28 ]
+"105
+[; ;./flex-lcd.h: 105: Lcd_Cmd(data);
+[e ( _Lcd_Cmd (1 _data ]
+"106
+[; ;./flex-lcd.h: 106: while(*buffer)
+[e $U 35  ]
+[e :U 36 ]
+"107
+[; ;./flex-lcd.h: 107: {
+{
+"108
+[; ;./flex-lcd.h: 108:     Lcd_Chr_CP(*buffer);
+[e ( _Lcd_Chr_CP (1 *U _buffer ]
+"109
+[; ;./flex-lcd.h: 109:     buffer++;
+[e ++ _buffer * -> -> 1 `i `x -> -> # *U _buffer `i `x ]
+"110
+[; ;./flex-lcd.h: 110: }
+}
+[e :U 35 ]
+"106
+[; ;./flex-lcd.h: 106: while(*buffer)
+[e $ != -> *U _buffer `i -> 0 `i 36  ]
+[e :U 37 ]
+"111
+[; ;./flex-lcd.h: 111: return;
+[e $UE 27  ]
+"112
+[; ;./flex-lcd.h: 112: }
+[e :UE 27 ]
+}
+"115
+[; ;./flex-lcd.h: 115: void Lcd_Out2(unsigned char y, unsigned char x, char *buffer)
+[v _Lcd_Out2 `(v ~T0 @X0 1 ef3`uc`uc`*uc ]
+"116
+[; ;./flex-lcd.h: 116: {
+{
+[e :U _Lcd_Out2 ]
+"115
+[; ;./flex-lcd.h: 115: void Lcd_Out2(unsigned char y, unsigned char x, char *buffer)
+[v _y `uc ~T0 @X0 1 r1 ]
+[v _x `uc ~T0 @X0 1 r2 ]
+[v _buffer `*uc ~T0 @X0 1 r3 ]
+"116
+[; ;./flex-lcd.h: 116: {
+[f ]
+"117
+[; ;./flex-lcd.h: 117: unsigned char data;
+[v _data `uc ~T0 @X0 1 a ]
+"118
+[; ;./flex-lcd.h: 118: switch (y)
+[e $U 40  ]
+"119
+[; ;./flex-lcd.h: 119: {
+{
+"120
+[; ;./flex-lcd.h: 120:     case 1: data = 128 + x; break;
+[e :U 41 ]
+[e = _data -> + -> 128 `i -> _x `i `uc ]
+[e $U 39  ]
+"121
+[; ;./flex-lcd.h: 121:     case 2: data = 192 + x; break;
+[e :U 42 ]
+[e = _data -> + -> 192 `i -> _x `i `uc ]
+[e $U 39  ]
+"122
+[; ;./flex-lcd.h: 122:     case 3: data = 148 + x; break;
+[e :U 43 ]
+[e = _data -> + -> 148 `i -> _x `i `uc ]
+[e $U 39  ]
+"123
+[; ;./flex-lcd.h: 123:     case 4: data = 212 + x; break;
+[e :U 44 ]
+[e = _data -> + -> 212 `i -> _x `i `uc ]
+[e $U 39  ]
+"124
+[; ;./flex-lcd.h: 124:     default: break;
+[e :U 45 ]
+[e $U 39  ]
+"125
+[; ;./flex-lcd.h: 125: }
+}
+[e $U 39  ]
+[e :U 40 ]
+[e [\ -> _y `i , $ -> 1 `i 41
+ , $ -> 2 `i 42
+ , $ -> 3 `i 43
+ , $ -> 4 `i 44
+ 45 ]
+[e :U 39 ]
+"126
+[; ;./flex-lcd.h: 126: Lcd_Cmd(data);
+[e ( _Lcd_Cmd (1 _data ]
+"127
+[; ;./flex-lcd.h: 127: while(*buffer)
+[e $U 46  ]
+[e :U 47 ]
+"128
+[; ;./flex-lcd.h: 128: {
+{
+"129
+[; ;./flex-lcd.h: 129:     Lcd_Chr_CP(*buffer);
+[e ( _Lcd_Chr_CP (1 *U _buffer ]
+"130
+[; ;./flex-lcd.h: 130:     buffer++;
+[e ++ _buffer * -> -> 1 `i `x -> -> # *U _buffer `i `x ]
+"131
+[; ;./flex-lcd.h: 131: }
+}
+[e :U 46 ]
+"127
+[; ;./flex-lcd.h: 127: while(*buffer)
+[e $ != -> *U _buffer `i -> 0 `i 47  ]
+[e :U 48 ]
+"132
+[; ;./flex-lcd.h: 132: return;
+[e $UE 38  ]
+"133
+[; ;./flex-lcd.h: 133: }
+[e :UE 38 ]
+}
+"136
+[; ;./flex-lcd.h: 136: void Lcd_Chr_CP(char data){
+[v _Lcd_Chr_CP `(v ~T0 @X0 1 ef1`uc ]
+{
+[e :U _Lcd_Chr_CP ]
+[v _data `uc ~T0 @X0 1 r1 ]
+[f ]
+"137
+[; ;./flex-lcd.h: 137: PORTBbits.RB7 = 0; PORTBbits.RB0 = 1;
+[e = . . _PORTBbits 0 7 -> -> 0 `i `uc ]
+[e = . . _PORTBbits 0 0 -> -> 1 `i `uc ]
+"138
+[; ;./flex-lcd.h: 138: PORTBbits.RB4 = (data & 0b10000000)>>7; PORTBbits.RB3 = (data & 0b01000000)>>6;
+[e = . . _PORTBbits 0 4 -> >> & -> _data `i -> 128 `i -> 7 `i `uc ]
+[e = . . _PORTBbits 0 3 -> >> & -> _data `i -> 64 `i -> 6 `i `uc ]
+"139
+[; ;./flex-lcd.h: 139: PORTBbits.RB2 = (data & 0b00100000)>>5; PORTBbits.RB1 = (data & 0b00010000)>>4;
+[e = . . _PORTBbits 0 2 -> >> & -> _data `i -> 32 `i -> 5 `i `uc ]
+[e = . . _PORTBbits 0 1 -> >> & -> _data `i -> 16 `i -> 4 `i `uc ]
+"140
+[; ;./flex-lcd.h: 140: _delay(10);
+[e ( __delay (1 -> -> -> 10 `i `l `ul ]
+"141
+[; ;./flex-lcd.h: 141: PORTBbits.RB7 = 1; _delay((unsigned long)((5)*(4000000/4000000.0))); PORTBbits.RB7 = 0;
+[e = . . _PORTBbits 0 7 -> -> 1 `i `uc ]
+[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+[e = . . _PORTBbits 0 7 -> -> 0 `i `uc ]
+"142
+[; ;./flex-lcd.h: 142: PORTBbits.RB4 = (data & 0b00001000)>>3; PORTBbits.RB3 = (data & 0b00000100)>>2;
+[e = . . _PORTBbits 0 4 -> >> & -> _data `i -> 8 `i -> 3 `i `uc ]
+[e = . . _PORTBbits 0 3 -> >> & -> _data `i -> 4 `i -> 2 `i `uc ]
+"143
+[; ;./flex-lcd.h: 143: PORTBbits.RB2 = (data & 0b00000010)>>1; PORTBbits.RB1 = (data & 0b00000001);
+[e = . . _PORTBbits 0 2 -> >> & -> _data `i -> 2 `i -> 1 `i `uc ]
+[e = . . _PORTBbits 0 1 -> & -> _data `i -> 1 `i `uc ]
+"144
+[; ;./flex-lcd.h: 144: _delay(10);
+[e ( __delay (1 -> -> -> 10 `i `l `ul ]
+"145
+[; ;./flex-lcd.h: 145: PORTBbits.RB7 = 1; _delay((unsigned long)((5)*(4000000/4000000.0))); PORTBbits.RB7 = 0;
+[e = . . _PORTBbits 0 7 -> -> 1 `i `uc ]
+[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+[e = . . _PORTBbits 0 7 -> -> 0 `i `uc ]
+"146
+[; ;./flex-lcd.h: 146: _delay((unsigned long)((5)*(4000000/4000000.0))); _delay((unsigned long)((5500)*(4000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+[e ( __delay (1 -> * -> -> 5500 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+"147
+[; ;./flex-lcd.h: 147: }
+[e :UE 49 ]
+}
+"150
+[; ;./flex-lcd.h: 150: void Lcd_Cmd(unsigned char data){
+[v _Lcd_Cmd `(v ~T0 @X0 1 ef1`uc ]
+{
+[e :U _Lcd_Cmd ]
+[v _data `uc ~T0 @X0 1 r1 ]
+[f ]
+"151
+[; ;./flex-lcd.h: 151: PORTBbits.RB7 = 0; PORTBbits.RB0 = 0;
+[e = . . _PORTBbits 0 7 -> -> 0 `i `uc ]
+[e = . . _PORTBbits 0 0 -> -> 0 `i `uc ]
+"152
+[; ;./flex-lcd.h: 152: PORTBbits.RB4 = (data & 0b10000000)>>7; PORTBbits.RB3 = (data & 0b01000000)>>6;
+[e = . . _PORTBbits 0 4 -> >> & -> _data `i -> 128 `i -> 7 `i `uc ]
+[e = . . _PORTBbits 0 3 -> >> & -> _data `i -> 64 `i -> 6 `i `uc ]
+"153
+[; ;./flex-lcd.h: 153: PORTBbits.RB2 = (data & 0b00100000)>>5; PORTBbits.RB1 = (data & 0b00010000)>>4;
+[e = . . _PORTBbits 0 2 -> >> & -> _data `i -> 32 `i -> 5 `i `uc ]
+[e = . . _PORTBbits 0 1 -> >> & -> _data `i -> 16 `i -> 4 `i `uc ]
+"154
+[; ;./flex-lcd.h: 154: _delay(10);
+[e ( __delay (1 -> -> -> 10 `i `l `ul ]
+"155
+[; ;./flex-lcd.h: 155: PORTBbits.RB7 = 1; _delay((unsigned long)((5)*(4000000/4000000.0))); PORTBbits.RB7 = 0;
+[e = . . _PORTBbits 0 7 -> -> 1 `i `uc ]
+[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+[e = . . _PORTBbits 0 7 -> -> 0 `i `uc ]
+"156
+[; ;./flex-lcd.h: 156: PORTBbits.RB4 = (data & 0b00001000)>>3; PORTBbits.RB3 = (data & 0b00000100)>>2;
+[e = . . _PORTBbits 0 4 -> >> & -> _data `i -> 8 `i -> 3 `i `uc ]
+[e = . . _PORTBbits 0 3 -> >> & -> _data `i -> 4 `i -> 2 `i `uc ]
+"157
+[; ;./flex-lcd.h: 157: PORTBbits.RB2 = (data & 0b00000010)>>1; PORTBbits.RB1 = (data & 0b00000001);
+[e = . . _PORTBbits 0 2 -> >> & -> _data `i -> 2 `i -> 1 `i `uc ]
+[e = . . _PORTBbits 0 1 -> & -> _data `i -> 1 `i `uc ]
+"158
+[; ;./flex-lcd.h: 158: _delay(10);
+[e ( __delay (1 -> -> -> 10 `i `l `ul ]
+"159
+[; ;./flex-lcd.h: 159: PORTBbits.RB7 = 1; _delay((unsigned long)((5)*(4000000/4000000.0))); PORTBbits.RB7 = 0;
+[e = . . _PORTBbits 0 7 -> -> 1 `i `uc ]
+[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+[e = . . _PORTBbits 0 7 -> -> 0 `i `uc ]
+"160
+[; ;./flex-lcd.h: 160: _delay((unsigned long)((5500)*(4000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 5500 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+"161
+[; ;./flex-lcd.h: 161: }
+[e :UE 50 ]
+}
+[v $root$_main `(v ~T0 @X0 0 e ]
+"16 main.c
+[; ;main.c: 16: void main(void) {
+[v _main `(v ~T0 @X0 1 ef ]
+{
+[e :U _main ]
+[f ]
+"18
+[; ;main.c: 18:     TRISB = 0B00010000;
+[e = _TRISB -> -> 16 `i `uc ]
+"28
+[; ;main.c: 28:     Lcd_Init();
+[e ( _Lcd_Init ..  ]
+"29
+[; ;main.c: 29:     Lcd_Cmd(1);
+[e ( _Lcd_Cmd (1 -> -> 1 `i `uc ]
+"30
+[; ;main.c: 30:     Lcd_Cmd(12);
+[e ( _Lcd_Cmd (1 -> -> 12 `i `uc ]
+"31
+[; ;main.c: 31:     _delay((unsigned long)((100)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"36
+[; ;main.c: 36:     while (1)
+[e :U 53 ]
+"37
+[; ;main.c: 37:     {
+{
+"39
+[; ;main.c: 39:         Lcd_Out(1,1,"ESIME CULHUACAN");
+[e ( _Lcd_Out (3 , , -> -> 1 `i `uc -> -> 1 `i `uc :s 1C ]
+"40
+[; ;main.c: 40:         Lcd_Out(2,1,"*****IPN*****");
+[e ( _Lcd_Out (3 , , -> -> 2 `i `uc -> -> 1 `i `uc :s 2C ]
+"42
+[; ;main.c: 42:          _delay((unsigned long)((300)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 300 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"44
+[; ;main.c: 44:     }
+}
+[e :U 52 ]
+[e $U 53  ]
+[e :U 54 ]
+"45
+[; ;main.c: 45:     return;
+[e $UE 51  ]
+"48
+[; ;main.c: 48:  }
+[e :UE 51 ]
+}
+[a 1C 69 83 73 77 69 32 67 85 76 72 85 65 67 65 78 0 ]
+[a 2C 42 42 42 42 42 73 80 78 42 42 42 42 42 0 ]

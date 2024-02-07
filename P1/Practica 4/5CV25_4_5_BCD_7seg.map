@@ -1,0 +1,53 @@
+MPLINK 4.48, Linker
+Linker Map File - Created Tue Mar 08 23:57:30 2022
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x0000a4
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x000051      
+            82 out of 1094 program addresses used, program memory utilization is 7%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                       B0   0x000030    program     static C:\Users\Edgar Alan\Desktop\Practica 4\5CV25_4_5_BCD_7seg.ASM
+                       B1   0x000033    program     static C:\Users\Edgar Alan\Desktop\Practica 4\5CV25_4_5_BCD_7seg.ASM
+                       B2   0x000036    program     static C:\Users\Edgar Alan\Desktop\Practica 4\5CV25_4_5_BCD_7seg.ASM
+                       B3   0x000039    program     static C:\Users\Edgar Alan\Desktop\Practica 4\5CV25_4_5_BCD_7seg.ASM
+                       B4   0x00003c    program     static C:\Users\Edgar Alan\Desktop\Practica 4\5CV25_4_5_BCD_7seg.ASM
+                       B5   0x00003f    program     static C:\Users\Edgar Alan\Desktop\Practica 4\5CV25_4_5_BCD_7seg.ASM
+                       B6   0x000042    program     static C:\Users\Edgar Alan\Desktop\Practica 4\5CV25_4_5_BCD_7seg.ASM
+                       B7   0x000045    program     static C:\Users\Edgar Alan\Desktop\Practica 4\5CV25_4_5_BCD_7seg.ASM
+                       B8   0x000048    program     static C:\Users\Edgar Alan\Desktop\Practica 4\5CV25_4_5_BCD_7seg.ASM
+                       B9   0x00004b    program     static C:\Users\Edgar Alan\Desktop\Practica 4\5CV25_4_5_BCD_7seg.ASM
+                    BUCLE   0x000006    program     static C:\Users\Edgar Alan\Desktop\Practica 4\5CV25_4_5_BCD_7seg.ASM
+                    NOBCD   0x00004e    program     static C:\Users\Edgar Alan\Desktop\Practica 4\5CV25_4_5_BCD_7seg.ASM
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                    BUCLE   0x000006    program     static C:\Users\Edgar Alan\Desktop\Practica 4\5CV25_4_5_BCD_7seg.ASM
+                       B0   0x000030    program     static C:\Users\Edgar Alan\Desktop\Practica 4\5CV25_4_5_BCD_7seg.ASM
+                       B1   0x000033    program     static C:\Users\Edgar Alan\Desktop\Practica 4\5CV25_4_5_BCD_7seg.ASM
+                       B2   0x000036    program     static C:\Users\Edgar Alan\Desktop\Practica 4\5CV25_4_5_BCD_7seg.ASM
+                       B3   0x000039    program     static C:\Users\Edgar Alan\Desktop\Practica 4\5CV25_4_5_BCD_7seg.ASM
+                       B4   0x00003c    program     static C:\Users\Edgar Alan\Desktop\Practica 4\5CV25_4_5_BCD_7seg.ASM
+                       B5   0x00003f    program     static C:\Users\Edgar Alan\Desktop\Practica 4\5CV25_4_5_BCD_7seg.ASM
+                       B6   0x000042    program     static C:\Users\Edgar Alan\Desktop\Practica 4\5CV25_4_5_BCD_7seg.ASM
+                       B7   0x000045    program     static C:\Users\Edgar Alan\Desktop\Practica 4\5CV25_4_5_BCD_7seg.ASM
+                       B8   0x000048    program     static C:\Users\Edgar Alan\Desktop\Practica 4\5CV25_4_5_BCD_7seg.ASM
+                       B9   0x00004b    program     static C:\Users\Edgar Alan\Desktop\Practica 4\5CV25_4_5_BCD_7seg.ASM
+                    NOBCD   0x00004e    program     static C:\Users\Edgar Alan\Desktop\Practica 4\5CV25_4_5_BCD_7seg.ASM
+
+
